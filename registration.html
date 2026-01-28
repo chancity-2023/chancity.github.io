@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Register your team for the Chancity Open Kabaddi Tournament. Online registration form for schools, clubs, and teams.">
+    <meta name="keywords" content="Chancity Sports Club, Tournament Registration, Kabaddi, Karnataka, Team Registration">
+    <title>Tournament Registration | Chancity Sports Club</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">CSC</div>
+                    <div class="logo-text">
+                        <span class="logo-title">Chancity Sports Club</span>
+                        <span class="logo-motto">Ready To Fight</span>
+                    </div>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="teams.html">Teams & Coaches</a></li>
+                    <li><a href="tournaments.html">Tournaments</a></li>
+                    <li><a href="registration.html" class="active">Register</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Tournament Registration</h1>
+            <p>Ready To Fight - Register Your Team Today!</p>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <a href="tournaments.html">Tournaments</a>
+                <span>/</span>
+                <span>Register</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Info -->
+    <section class="section">
+        <div class="container">
+            <div class="tournament-info" style="margin-bottom: 50px;">
+                <h3 class="tournament-title">Chancity Open Kabaddi Tournament</h3>
+                <p class="tournament-subtitle">Team Registration Form</p>
+                <p style="max-width: 700px; margin: 0 auto;">
+                    Complete the form below to register your team for the upcoming tournament. 
+                    All fields marked with * are required. You will receive a confirmation email 
+                    upon successful registration.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Form -->
+    <section class="section" style="padding-top: 0;">
+        <div class="container">
+            <form class="registration-form" id="tournamentRegistration">
+                <!-- Team Information -->
+                <h3 style="color: var(--primary-color); margin-bottom: 25px; border-bottom: 2px solid var(--secondary-color); padding-bottom: 10px;">
+                    <i class="fas fa-users"></i> Team Information
+                </h3>
+                
+                <div class="form-group">
+                    <label for="teamName">Team/School/Club Name *</label>
+                    <input type="text" id="teamName" name="teamName" placeholder="Enter your team or school name" required>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="category">Category *</label>
+                        <select id="category" name="category" required>
+                            <option value="">Select Category</option>
+                            <option value="senior">Senior (18+ years)</option>
+                            <option value="junior">Junior (Under 18)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="teamSize">Number of Players *</label>
+                        <select id="teamSize" name="teamSize" required>
+                            <option value="">Select Team Size</option>
+                            <option value="7">7 Players</option>
+                            <option value="8">8 Players</option>
+                            <option value="9">9 Players</option>
+                            <option value="10">10 Players</option>
+                            <option value="11">11 Players</option>
+                            <option value="12">12 Players</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Contact Person Information -->
+                <h3 style="color: var(--primary-color); margin: 40px 0 25px; border-bottom: 2px solid var(--secondary-color); padding-bottom: 10px;">
+                    <i class="fas fa-user-tie"></i> Contact Person Details
+                </h3>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="contactName">Contact Person Name *</label>
+                        <input type="text" id="contactName" name="contactName" placeholder="Full name of team manager/coach" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="designation">Designation *</label>
+                        <select id="designation" name="designation" required>
+                            <option value="">Select Designation</option>
+                            <option value="coach">Coach</option>
+                            <option value="manager">Team Manager</option>
+                            <option value="teacher">Physical Education Teacher</option>
+                            <option value="captain">Team Captain</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="altPhone">Alternate Phone Number</label>
+                    <input type="tel" id="altPhone" name="altPhone" placeholder="+91 XXXXX XXXXX (Optional)">
+                </div>
+
+                <!-- Address Information -->
+                <h3 style="color: var(--primary-color); margin: 40px 0 25px; border-bottom: 2px solid var(--secondary-color); padding-bottom: 10px;">
+                    <i class="fas fa-map-marker-alt"></i> Address Details
+                </h3>
+                
+                <div class="form-group">
+                    <label for="address">School/Club Address *</label>
+                    <textarea id="address" name="address" rows="3" placeholder="Full address including street, area, and landmark" required></textarea>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="city">City/Town *</label>
+                        <input type="text" id="city" name="city" placeholder="City or Town" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="district">District *</label>
+                        <input type="text" id="district" name="district" placeholder="District" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="state">State *</label>
+                        <input type="text" id="state" name="state" value="Karnataka" placeholder="State" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pincode">PIN Code *</label>
+                        <input type="text" id="pincode" name="pincode" placeholder="6-digit PIN code" pattern="[1-8][0-9]{5}" title="Please enter a valid 6-digit Indian PIN code" required>
+                    </div>
+                </div>
+
+                <!-- Team Members -->
+                <h3 style="color: var(--primary-color); margin: 40px 0 25px; border-bottom: 2px solid var(--secondary-color); padding-bottom: 10px;">
+                    <i class="fas fa-list-ol"></i> Team Members List
+                </h3>
+                
+                <div class="form-group">
+                    <label for="players">Player Names and Details *</label>
+                    <textarea id="players" name="players" rows="8" placeholder="Please list all players in the following format (one per line):
+
+1. Full Name - Age - Position (Raider/Defender/All-Rounder)
+2. Full Name - Age - Position
+3. Full Name - Age - Position
+... (continue for all players)" required></textarea>
+                    <p style="color: #666; font-size: 0.85rem; margin-top: 8px;">
+                        <i class="fas fa-info-circle"></i> Include Captain's name first. Maximum 12 players for Senior, 10 for Junior category.
+                    </p>
+                </div>
+
+                <!-- Additional Information -->
+                <h3 style="color: var(--primary-color); margin: 40px 0 25px; border-bottom: 2px solid var(--secondary-color); padding-bottom: 10px;">
+                    <i class="fas fa-clipboard"></i> Additional Information
+                </h3>
+                
+                <div class="form-group">
+                    <label for="experience">Team's Previous Tournament Experience</label>
+                    <textarea id="experience" name="experience" rows="3" placeholder="Briefly describe any previous tournaments your team has participated in (optional)"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="requirements">Special Requirements or Requests</label>
+                    <textarea id="requirements" name="requirements" rows="2" placeholder="Any special requirements, dietary restrictions, or accessibility needs (optional)"></textarea>
+                </div>
+
+                <!-- Terms and Conditions -->
+                <div class="form-group" style="margin-top: 30px;">
+                    <label style="display: flex; align-items: flex-start; gap: 10px; cursor: pointer;">
+                        <input type="checkbox" id="terms" name="terms" required style="width: auto; margin-top: 5px;">
+                        <span style="font-weight: normal; font-size: 0.95rem;">
+                            I confirm that all information provided is accurate. I agree to the 
+                            <a href="tournaments.html#rules" style="color: var(--primary-color); text-decoration: underline;">tournament rules and regulations</a> 
+                            and understand that any false information may result in disqualification. *
+                        </span>
+                    </label>
+                </div>
+                
+                <div class="form-group">
+                    <label style="display: flex; align-items: flex-start; gap: 10px; cursor: pointer;">
+                        <input type="checkbox" id="newsletter" name="newsletter" style="width: auto; margin-top: 5px;">
+                        <span style="font-weight: normal; font-size: 0.95rem;">
+                            I would like to receive updates about future tournaments and club news via email.
+                        </span>
+                    </label>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-submit">
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> Submit Registration
+                    </button>
+                    <p style="color: #666; font-size: 0.85rem; margin-top: 15px;">
+                        A confirmation email will be sent to the provided email address upon successful registration.
+                    </p>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Important Notes -->
+    <section class="section section-dark">
+        <div class="container">
+            <div class="section-title">
+                <h2>Important Information</h2>
+                <p class="section-subtitle">Please read before submitting your registration</p>
+            </div>
+            <div class="about-features">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h4>Required Documents</h4>
+                    <ul style="text-align: left; padding-left: 20px;">
+                        <li>Valid ID proof for all players</li>
+                        <li>Age certificates for Junior category</li>
+                        <li>School/Club authorization letter</li>
+                        <li>Passport-size photos of players</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h4>Registration Deadline</h4>
+                    <p>
+                        Registration closes one week before the tournament date. 
+                        Early registration is recommended as spots are limited. 
+                        Late entries may be accepted at the organizers' discretion.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-envelope-open-text"></i>
+                    </div>
+                    <h4>After Registration</h4>
+                    <p>
+                        You will receive a confirmation email with further instructions. 
+                        Document verification will be scheduled before the tournament. 
+                        Contact us if you don't receive confirmation within 48 hours.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="section">
+        <div class="container text-center">
+            <h2 style="color: var(--primary-color); margin-bottom: 1rem;">Need Help?</h2>
+            <p style="color: #666; max-width: 600px; margin: 0 auto 2rem;">
+                If you have any questions about the registration process or need assistance, 
+                please don't hesitate to contact us.
+            </p>
+            <a href="contact.html" class="btn btn-primary">Contact Us</a>
+            <a href="tournaments.html" class="btn btn-secondary" style="border-color: var(--primary-color); color: var(--primary-color);">View Tournament Details</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="logo">
+                        <div class="logo-icon">CSC</div>
+                        <div class="logo-text">
+                            <span class="logo-title" style="color: white;">Chancity Sports Club</span>
+                            <span class="logo-motto">Ready To Fight</span>
+                        </div>
+                    </div>
+                    <p>The official Kabaddi team of Karnataka Government School, dedicated to nurturing champions through discipline, teamwork, and competitive excellence.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="teams.html">Teams & Coaches</a></li>
+                        <li><a href="tournaments.html">Tournaments</a></li>
+                        <li><a href="registration.html">Register</a></li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <p style="color: #aaa;">Connect with us on social media for updates and highlights.</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Karnataka Government School, Karnataka, India</p>
+                    <p><i class="fas fa-phone"></i> +91 XXXXX XXXXX</p>
+                    <p><i class="fas fa-envelope"></i> info@chancitysportsclub.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Chancity Sports Club. All Rights Reserved. | Ready To Fight</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
