@@ -14,11 +14,10 @@
     <header>
         <div class="container">
             <nav class="navbar">
-                 <a href="index.html" class="logo">
-                    <img src="assets/cropped_circle_image.png" alt="Chancity Sports Club Logo" width="50" height="50" class="logo-image" onerror="this.style.display='none';">
+                <a href="index.html" class="logo">
+                   <img src="assets/cropped_circle_image.png" alt="Chancity Sports Club Logo" width="50" height="50" class="logo-image" onerror="this.style.display='none';">
                     <div class="logo-text">
                         <span class="logo-title">Kabbadi</span>
-
                     </div>
                 </a>
                 <ul class="nav-links">
@@ -27,7 +26,6 @@
                     <li><a href="teams.html">Teams & Coaches</a></li>
                     <li><a href="tournaments.html">Tournaments</a></li>
                     <li><a href="registration.html" class="active">Register</a></li>
-                    
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
                 <div class="social-icons">
@@ -263,10 +261,10 @@
                     </div>
                     <h4>Required Documents</h4>
                     <ul style="text-align: left; padding-left: 20px;">
-                        <li>Valid ID proof for all players</li>
-                        <li>Age certificates for Junior category</li>
-                        <li>School/Club authorization letter</li>
-                        <li>Passport-size photos of players</li>
+                        <li style="color: black;">Valid ID proof for all players</li>
+                        <li style="color: black;">Age certificates for Junior category</li>
+                        <li style="color: black;">School/Club authorization letter</li>
+                        <li style="color: black;">Passport-size photos of players</li>
                     </ul>
                 </div>
                 <div class="feature-card">
@@ -274,7 +272,7 @@
                         <i class="fas fa-calendar-check"></i>
                     </div>
                     <h4>Registration Deadline</h4>
-                    <p>
+                    <p style="color: black;">
                         Registration closes one week before the tournament date. 
                         Early registration is recommended as spots are limited. 
                         Late entries may be accepted at the organizers' discretion.
@@ -285,7 +283,7 @@
                         <i class="fas fa-envelope-open-text"></i>
                     </div>
                     <h4>After Registration</h4>
-                    <p>
+                    <p style="color: black;">
                         You will receive a confirmation email with further instructions. 
                         Document verification will be scheduled before the tournament. 
                         Contact us if you don't receive confirmation within 48 hours.
@@ -308,13 +306,13 @@
         </div>
     </section>
 
-    <!-- Footer -->
+<!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-about">
                     <div class="logo">
-                        <div class="logo-icon">CSC</div>
+                         <img src="assets/cropped_circle_image.png" alt="Chancity Sports Club Logo" width="50" height="50" class="logo-image" onerror="this.style.display='none';">
                         <div class="logo-text">
                             <span class="logo-title" style="color: white;">Chancity Sports Club</span>
                             <span class="logo-motto">Ready To Fight</span>
@@ -330,26 +328,57 @@
                         <li><a href="teams.html">Teams & Coaches</a></li>
                         <li><a href="tournaments.html">Tournaments</a></li>
                         <li><a href="registration.html">Register</a></li>
-                        <li><a href="news.html">News</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-                <div class="footer-social">
-                    <h4>Follow Us</h4>
-                    <p style="color: #aaa;">Connect with us on social media for updates and highlights.</p>
-                    <div class="social-icons">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-                <div class="footer-contact">
+<!-- Social Links -->
+<div style="margin-top: 0px;">
+    <h4
+        style="color: #d2b003; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.1rem; margin-bottom: 20px; text-align: center;">
+        Follow Us</h4>
+
+    <div style="display: flex; gap: 15px; justify-content: center;">
+
+          <!-- Facebook (Coming Soon - WHITE ICON, BLUE CIRCLE) -->
+        <a href="javascript:void(0)"
+           onclick="showFbComingSoon()"
+           style="display: inline-flex; width: 50px; height: 50px; background-color: #1877F2; border-radius: 50%; align-items: center; justify-content: center; transition: all 0.3s ease; position: relative;"
+           aria-label="Facebook - Coming Soon">
+
+            <!-- ONLY CHANGE: white Facebook icon -->
+            <i class="fab fa-facebook-f" style="color:#ffffff;"></i>
+        </a>
+
+        <!-- Instagram (UNCHANGED) -->
+        <a href="https://www.instagram.com/chan_city_sports_club?igsh=OGU0b2drbWsyMnU5"
+           target="_blank"
+           style="display: inline-flex; width: 50px; height: 50px; background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); border-radius: 50%; align-items: center; justify-content: center; color: white; transition: all 0.3s ease;"
+           onmouseover="this.style.transform='scale(1.15)'; this.style.boxShadow='0 8px 25px rgba(225,48,108,0.5)';"
+           onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';"
+           aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+
+        <!-- YouTube (UNCHANGED) -->
+        <a href="https://youtube.com/@chancitysportsclub?si=qZBz6BVKRmNKrxRE"
+           target="_blank"
+           style="display: inline-flex; width: 50px; height: 50px; background-color: #FF0000; border-radius: 50%; align-items: center; justify-content: center; color: white; transition: all 0.3s ease;"
+           onmouseover="this.style.transform='scale(1.15)'; this.style.boxShadow='0 8px 25px rgba(255,0,0,0.5)';"
+           onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';"
+           aria-label="YouTube">
+            <i class="fab fa-youtube"></i>
+        </a>
+
+    </div>
+</div>
+
+               <div class="footer-contact">
                     <h4>Contact Us</h4>
-                    <p><i class="fas fa-map-marker-alt"></i> Karnataka Government School, Karnataka, India</p>
-                    <p><i class="fas fa-phone"></i> +91 XXXXX XXXXX</p>
-                    <p><i class="fas fa-envelope"></i> info@chancitysportsclub.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> G.H.P.S Channasandra, Bengaluru, Karnataka, India</p>
+                    <p><i class="fas fa-phone"></i> +91 990067717</p>
+                    <p><i class="fas fa-envelope"></i>chancitysportsclub2023@gmail.com</p>
                 </div>
+            </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2024 Chancity Sports Club. All Rights Reserved. | Ready To Fight</p>
