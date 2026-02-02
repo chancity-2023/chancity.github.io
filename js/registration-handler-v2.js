@@ -15,7 +15,100 @@ class RegistrationHandler {
     init() {
         if (!this.form) return;
         this.form.addEventListener('submit', (e) => this.handleSubmit(e));
+        // Check registration status on page load
+        this.checkRegistrationStatus();
     }
+
+    async checkRegistrationStatus() {
+        try {
+            const response = await fetch('http://localhost:8000/api/admin/settings/public/registration-status');
+            if (response.ok) {
+                const data = await response.json();
+                if (!data.registration_open) {
+                    this.showRegistrationClosed();
+                }
+            }
+        } catch (err) {
+            console.warn('Could not check registration status:', err.message);
+            // If we can't check, assume open (graceful degradation)
+        }
+    }
+
+    showRegistrationClosed() {
+        // Hide the form
+        if (this.form) {
+            this.form.style.display = 'none';
+        }
+
+        // Create closed message
+        const closedMessage = document.createElement('div');
+        closedMessage.id = 'registration-closed-message';
+        closedMessage.innerHTML = `
+            <div style="
+                background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+                border: 2px solid #e74c3c;
+                border-radius: 20px;
+                padding: 60px 40px;
+                text-align: center;
+                max-width: 600px;
+                margin: 40px auto;
+                box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            ">
+                <div style="
+                    width: 80px;
+                    height: 80px;
+                    background: linear-gradient(135deg, #e74c3c, #c0392b);
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 0 auto 30px;
+                ">
+                    <i class="fas fa-lock" style="font-size: 2rem; color: white;"></i>
+                </div>
+                <h2 style="
+                    font-family: 'Bebas Neue', sans-serif;
+                    font-size: 2.5rem;
+                    color: #e74c3c;
+                    margin-bottom: 20px;
+                    letter-spacing: 3px;
+                ">REGISTRATIONS CLOSED</h2>
+                <p style="
+                    font-family: 'Poppins', sans-serif;
+                    color: #cbd5e1;
+                    font-size: 1.1rem;
+                    line-height: 1.8;
+                    margin-bottom: 30px;
+                ">
+                    Thank you for your interest in the Chancity Open Kabaddi Tournament!
+                    <br><br>
+                    Registrations are currently closed. Please check back later or follow our social media for updates on the next tournament.
+                </p>
+                <a href="contact.html" style="
+                    display: inline-block;
+                    background: linear-gradient(135deg, #f5a623, #f7b844);
+                    color: #1a1a2e;
+                    font-family: 'Bebas Neue', sans-serif;
+                    font-size: 1.2rem;
+                    letter-spacing: 2px;
+                    padding: 15px 40px;
+                    border-radius: 50px;
+                    text-decoration: none;
+                    transition: all 0.3s ease;
+                ">
+                    <i class="fas fa-envelope" style="margin-right: 10px;"></i>
+                    CONTACT US
+                </a>
+            </div>
+        `;
+
+        // Insert after the form's parent (registration section)
+        const formParent = this.form.parentElement;
+        if (formParent) {
+            formParent.insertBefore(closedMessage, this.form);
+        }
+    }
+
 
     async handleSubmit(event) {
         event.preventDefault();

@@ -1666,4 +1666,208 @@ header.scrolled {
         opacity: 1;
         transform: translateY(0);
     }
+}/ *   = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+/* ==========================================================================
+       REGISTRATION FORM - BOLD & VIBRANT STYLING
+       Enhanced typography and colors
+       ========================================================================== */
+
+/* Import Bold Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&family=Bebas+Neue&display=swap');
+
+/* Override Registration Form Typography */
+.registration-form {
+    font-family: 'Poppins', sans-serif;
+}
+
+.registration-form h3 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    color: #FF3366 !important;
+    text-transform: uppercase;
+    border-bottom: 3px solid #FFD700 !important;
+    padding-bottom: 15px !important;
+    margin-bottom: 30px !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.registration-form h3 i {
+    color: #8B5CF6;
+    margin-right: 10px;
+    font-size: 1.8rem;
+}
+
+/* Form Labels - Bold and Vibrant */
+.form-group label {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700 !important;
+    font-size: 1.1rem !important;
+    color: #2D3748 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px !important;
+}
+
+/* Input Fields - Vibrant Borders */
+.form-group input,
+.form-group select,
+.form-group textarea {
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 1rem !important;
+    border: 3px solid #E2E8F0 !important;
+    border-radius: 12px !important;
+    padding: 16px !important;
+    transition: all 0.3s ease !important;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #FF3366 !important;
+    box-shadow: 0 0 0 4px rgba(255, 51, 102, 0.1) !important;
+    outline: none !important;
+    transform: translateY(-2px);
+}
+
+.form-group input:hover,
+.form-group select:hover,
+.form-group textarea:hover {
+    border-color: #8B5CF6 !important;
+}
+
+/* Placeholder Text */
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #A0AEC0;
+    font-weight: 500;
+}
+
+/* Submit Button - Bold and Vibrant */
+.form-submit .btn-primary {
+    font-family: 'Bebas Neue', cursive !important;
+    font-size: 1.5rem !important;
+    letter-spacing: 3px !important;
+    font-weight: normal !important;
+    background: linear-gradient(135deg, #FF3366 0%, #8B5CF6 100%) !important;
+    border: none !important;
+    padding: 18px 50px !important;
+    text-transform: uppercase !important;
+    box-shadow: 0 10px 30px rgba(255, 51, 102, 0.4) !important;
+    transition: all 0.3s ease !important;
+}
+
+.form-submit .btn-primary:hover {
+    background: linear-gradient(135deg, #8B5CF6 0%, #FFD700 100%) !important;
+    transform: translateY(-4px) scale(1.05) !important;
+    box-shadow: 0 15px 40px rgba(139, 92, 246, 0.5) !important;
+}
+
+.form-submit .btn-primary i {
+    font-size: 1.6rem;
+    margin-right: 12px;
+}
+
+/* Tournament Info Section - Vibrant */
+.tournament-info {
+    background: linear-gradient(135deg, #FF3366 0%, #8B5CF6 50%, #FFD700 100%) !important;
+    border-radius: 20px !important;
+    padding: 60px !important;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3) !important;
+}
+
+.tournament-title {
+    font-family: 'Bebas Neue', cursive !important;
+    font-size: 3rem !important;
+    letter-spacing: 4px !important;
+    color: white !important;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3) !important;
+}
+
+.tournament-subtitle {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 1.5rem !important;
+    font-weight: 700 !important;
+    color: #FFD700 !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Checkbox Labels - Bold */
+.form-group label[style*="display: flex"] {
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 600 !important;
+    text-transform: none !important;
+}
+
+.form-group label[style*="display: flex"] a {
+    color: #FF3366 !important;
+    font-weight: 700 !important;
+    text-decoration: underline !important;
+}
+
+.form-group label[style*="display: flex"] a:hover {
+    color: #8B5CF6 !important;
+}
+
+/* Info Text - Bold and Colorful */
+.form-group p[style*="color: #666"] {
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 600 !important;
+    color: #4A5568 !important;
+}
+
+.form-group p[style*="color: #666"] i {
+    color: #8B5CF6 !important;
+}
+
+/* Submit Message */
+#submitMessage {
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 1rem !important;
+}
+
+/* Feature Cards in Important Info - Vibrant */
+.feature-card {
+    border: 3px solid transparent !important;
+    transition: all 0.3s ease !important;
+}
+
+.feature-card:nth-child(1) { border-color: #FF3366 !important; }
+.feature-card:nth-child(2) { border-color: #8B5CF6 !important; }
+.feature-card:nth-child(3) { border-color: #FFD700 !important; }
+
+.feature-card h4 {
+    font-family: 'Bebas Neue', cursive !important;
+    font-size: 1.8rem !important;
+    letter-spacing: 2px !important;
+    color: #2D3748 !important;
+}
+
+.feature-card:nth-child(1) .feature-icon { background: linear-gradient(135deg, #FF3366, #FF6B9D) !important; }
+.feature-card:nth-child(2) .feature-icon { background: linear-gradient(135deg, #8B5CF6, #A78BFA) !important; }
+.feature-card:nth-child(3) .feature-icon { background: linear-gradient(135deg, #FFD700, #FFC107) !important; }
+
+/* Page Header - Bold Typography */
+.page-header h1 {
+    font-family: 'Bebas Neue', cursive !important;
+    font-size: 4rem !important;
+    letter-spacing: 6px !important;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3) !important;
+}
+
+.page-header p {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 1.8rem !important;
+    font-weight: 700 !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .registration-form h3 { font-size: 1.6rem; }
+    .tournament-title { font-size: 2.2rem !important; }
+    .page-header h1 { font-size: 2.5rem !important; }
 }

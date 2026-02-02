@@ -4,6 +4,7 @@ FastAPI application entry point.
 
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.middleware.gzip import GZipMiddleware
 from fastapi.responses import JSONResponse
 from fastapi.exceptions import RequestValidationError
 from datetime import datetime
@@ -11,6 +12,8 @@ import logging
 
 from app.config import settings
 from app.routes import registration_router
+from app.routers.admin import router as admin_router
+from app.routers.settings import router as settings_router
 
 # Configure logging
 logging.basicConfig(
@@ -46,6 +49,9 @@ else:
         allow_headers=["*"],
         max_age=3600
     )
+
+# GZip Compression
+app.add_middleware(GZipMiddleware, minimum_size=1000)
 
 
 # Exception Handlers
@@ -105,6 +111,8 @@ async def root():
 
 # Include Routers
 app.include_router(registration_router)
+app.include_router(admin_router)
+app.include_router(settings_router)
 
 
 # Startup Event
