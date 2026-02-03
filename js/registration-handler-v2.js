@@ -132,7 +132,7 @@ class RegistrationHandler {
         this.setLoading(true);
 
         try {
-            const response = await fetch('https://chancity-backend.onrender.com/api/v1/registrations', {
+            const response = await fetch(' https://gitback-mqnw.onrender.com/api/v1/registrations', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data)
