@@ -450,12 +450,12 @@ p {
 .nav-cta {
     background: linear-gradient(135deg, var(--primary-500), var(--primary-600));
     color: var(--neutral-0);
-    padding: var(--space-3) var(--space-5);
+    padding: var(--space-2) var(--space-4);
     border-radius: var(--radius-md);
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    font-size: var(--text-sm);
+    font-size: var(--text-xs);
     border: 1px solid rgba(212, 160, 23, 0.3);
     transition: var(--transition-base);
 }
