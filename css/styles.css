@@ -15,7 +15,7 @@
     --primary-300: #d64545;
     --primary-200: #e57373;
     --primary-100: #ffcdd2;
-    
+
     /* Secondary Colors - Gold/Amber */
     --gold-900: #3d2808;
     --gold-800: #5c3d0b;
@@ -26,7 +26,7 @@
     --gold-300: #e6b800;
     --gold-200: #ffd700;
     --gold-100: #ffeb99;
-    
+
     /* Neutral Colors */
     --neutral-900: #0a0a0a;
     --neutral-800: #141414;
@@ -39,12 +39,12 @@
     --neutral-100: #d4d4d4;
     --neutral-50: #f5f5f5;
     --neutral-0: #ffffff;
-    
+
     /* Accent Colors */
     --accent-blue: #0066cc;
     --accent-green: #00b300;
     --accent-orange: #ff6600;
-    
+
     /* Semantic Colors */
     --text-primary: var(--neutral-100);
     --text-secondary: var(--neutral-300);
@@ -52,37 +52,58 @@
     --bg-primary: var(--neutral-900);
     --bg-secondary: var(--neutral-800);
     --bg-tertiary: var(--neutral-700);
-    
+
     /* Sports-specific */
     --color-win: #22c55e;
     --color-loss: #ef4444;
     --color-draw: #eab308;
-    
+
     /* Spacing Scale */
-    --space-1: 0.25rem;   /* 4px */
-    --space-2: 0.5rem;    /* 8px */
-    --space-3: 0.75rem;   /* 12px */
-    --space-4: 1rem;      /* 16px */
-    --space-5: 1.5rem;    /* 24px */
-    --space-6: 2rem;      /* 32px */
-    --space-8: 3rem;      /* 48px */
-    --space-10: 4rem;     /* 64px */
-    --space-12: 6rem;     /* 96px */
-    --space-16: 8rem;     /* 128px */
-    
+    --space-1: 0.25rem;
+    /* 4px */
+    --space-2: 0.5rem;
+    /* 8px */
+    --space-3: 0.75rem;
+    /* 12px */
+    --space-4: 1rem;
+    /* 16px */
+    --space-5: 1.5rem;
+    /* 24px */
+    --space-6: 2rem;
+    /* 32px */
+    --space-8: 3rem;
+    /* 48px */
+    --space-10: 4rem;
+    /* 64px */
+    --space-12: 6rem;
+    /* 96px */
+    --space-16: 8rem;
+    /* 128px */
+
     /* Typography Scale */
-    --text-xs: 0.75rem;   /* 12px */
-    --text-sm: 0.875rem;  /* 14px */
-    --text-base: 1rem;    /* 16px */
-    --text-lg: 1.125rem;  /* 18px */
-    --text-xl: 1.25rem;   /* 20px */
-    --text-2xl: 1.5rem;   /* 24px */
-    --text-3xl: 1.875rem; /* 30px */
-    --text-4xl: 2.25rem;  /* 36px */
-    --text-5xl: 3rem;     /* 48px */
-    --text-6xl: 3.75rem;  /* 60px */
-    --text-7xl: 4.5rem;   /* 72px */
-    
+    --text-xs: 0.75rem;
+    /* 12px */
+    --text-sm: 0.875rem;
+    /* 14px */
+    --text-base: 1rem;
+    /* 16px */
+    --text-lg: 1.125rem;
+    /* 18px */
+    --text-xl: 1.25rem;
+    /* 20px */
+    --text-2xl: 1.5rem;
+    /* 24px */
+    --text-3xl: 1.875rem;
+    /* 30px */
+    --text-4xl: 2.25rem;
+    /* 36px */
+    --text-5xl: 3rem;
+    /* 48px */
+    --text-6xl: 3.75rem;
+    /* 60px */
+    --text-7xl: 4.5rem;
+    /* 72px */
+
     /* Shadows */
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -2px rgba(0, 0, 0, 0.3);
@@ -90,7 +111,7 @@
     --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.4);
     --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
     --shadow-gold: 0 0 40px rgba(212, 160, 23, 0.3);
-    
+
     /* Border Radius */
     --radius-sm: 4px;
     --radius-md: 8px;
@@ -98,13 +119,13 @@
     --radius-xl: 16px;
     --radius-2xl: 24px;
     --radius-full: 9999px;
-    
+
     /* Transitions */
     --transition-fast: 150ms ease;
     --transition-base: 250ms ease;
     --transition-slow: 350ms ease;
     --transition-bounce: 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    
+
     /* Z-Index Scale */
     --z-dropdown: 100;
     --z-sticky: 200;
@@ -118,7 +139,9 @@
 /* ==========================================================================
    2. RESET & BASE STYLES
    ========================================================================== */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -153,7 +176,8 @@ a {
     transition: var(--transition-base);
 }
 
-ul, ol {
+ul,
+ol {
     list-style: none;
 }
 
@@ -164,7 +188,9 @@ button {
     font-family: inherit;
 }
 
-input, textarea, select {
+input,
+textarea,
+select {
     font-family: inherit;
     font-size: inherit;
 }
@@ -172,7 +198,12 @@ input, textarea, select {
 /* ==========================================================================
    3. TYPOGRAPHY
    ========================================================================== */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Montserrat', 'Inter', sans-serif;
     font-weight: 700;
     line-height: 1.2;
@@ -310,7 +341,10 @@ p {
 }
 
 @media (max-width: 768px) {
-    .grid-2, .grid-3, .grid-4 {
+
+    .grid-2,
+    .grid-3,
+    .grid-4 {
         grid-template-columns: 1fr;
     }
 }
@@ -487,7 +521,7 @@ p {
     .menu-toggle {
         display: flex;
     }
-    
+
     .nav-menu {
         position: fixed;
         top: 80px;
@@ -503,7 +537,7 @@ p {
         transition: var(--transition-slow);
         border-bottom: 1px solid var(--neutral-800);
     }
-    
+
     .nav-menu.active {
         transform: translateY(0);
         opacity: 1;
@@ -527,7 +561,7 @@ p {
 .hero-bg {
     position: absolute;
     inset: 0;
-    background: 
+    background:
         radial-gradient(ellipse at 20% 50%, rgba(122, 28, 28, 0.3) 0%, transparent 50%),
         radial-gradient(ellipse at 80% 50%, rgba(184, 134, 11, 0.15) 0%, transparent 50%),
         linear-gradient(180deg, var(--neutral-900) 0%, var(--primary-900) 100%);
@@ -577,8 +611,91 @@ p {
 }
 
 @keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.5; }
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* Hero Logo with Aura */
+.hero-logo-container {
+    display: inline-block;
+    margin-bottom: var(--space-8);
+    position: relative;
+}
+
+.hero-logo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 0 40px rgba(212, 160, 23, 0.4);
+}
+
+/* Aura effect behind logo */
+.hero-logo-container::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, rgba(212, 160, 23, 0.4) 0%, rgba(212, 160, 23, 0.2) 30%, transparent 70%);
+    border-radius: 50%;
+    z-index: 1;
+    animation: auraGlow 2s ease-in-out infinite alternate;
+}
+
+/* Outer aura ring */
+.hero-logo-container::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(255, 215, 0, 0.2) 0%, rgba(212, 160, 23, 0.1) 40%, transparent 70%);
+    border-radius: 50%;
+    z-index: 0;
+    animation: auraGlow 2s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes auraGlow {
+    0% {
+        opacity: 0.6;
+        transform: translate(-50%, -50%) scale(0.95);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.05);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-logo {
+        width: 150px;
+        height: 150px;
+    }
+
+    .hero-logo-container::before {
+        width: 200px;
+        height: 200px;
+    }
+
+    .hero-logo-container::after {
+        width: 240px;
+        height: 240px;
+    }
 }
 
 .hero-title {
@@ -924,7 +1041,7 @@ p {
         grid-template-columns: 1fr;
         gap: var(--space-8);
     }
-    
+
     .about-image::before {
         display: none;
     }
@@ -1052,7 +1169,7 @@ p {
     .form-row {
         grid-template-columns: 1fr;
     }
-    
+
     .form-container {
         padding: var(--space-6);
     }
@@ -1280,7 +1397,7 @@ p {
     .footer-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .footer-bottom {
         flex-direction: column;
         text-align: center;
@@ -1290,19 +1407,49 @@ p {
 /* ==========================================================================
    15. UTILITY CLASSES
    ========================================================================== */
-.bg-primary { background-color: var(--bg-primary); }
-.bg-secondary { background-color: var(--bg-secondary); }
-.bg-accent { background: linear-gradient(135deg, var(--primary-500), var(--primary-600)); }
+.bg-primary {
+    background-color: var(--bg-primary);
+}
 
-.text-gold { color: var(--gold-300); }
-.text-muted { color: var(--text-muted); }
+.bg-secondary {
+    background-color: var(--bg-secondary);
+}
 
-.mt-4 { margin-top: var(--space-4); }
-.mt-6 { margin-top: var(--space-6); }
-.mt-8 { margin-top: var(--space-8); }
-.mb-4 { margin-bottom: var(--space-4); }
-.mb-6 { margin-bottom: var(--space-6); }
-.mb-8 { margin-bottom: var(--space-8); }
+.bg-accent {
+    background: linear-gradient(135deg, var(--primary-500), var(--primary-600));
+}
+
+.text-gold {
+    color: var(--gold-300);
+}
+
+.text-muted {
+    color: var(--text-muted);
+}
+
+.mt-4 {
+    margin-top: var(--space-4);
+}
+
+.mt-6 {
+    margin-top: var(--space-6);
+}
+
+.mt-8 {
+    margin-top: var(--space-8);
+}
+
+.mb-4 {
+    margin-bottom: var(--space-4);
+}
+
+.mb-6 {
+    margin-bottom: var(--space-6);
+}
+
+.mb-8 {
+    margin-bottom: var(--space-8);
+}
 
 /* ==========================================================================
    16. ANIMATIONS
@@ -1312,6 +1459,7 @@ p {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -1319,8 +1467,13 @@ p {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes slideInLeft {
@@ -1328,6 +1481,7 @@ p {
         opacity: 0;
         transform: translateX(-50px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -1339,6 +1493,7 @@ p {
         opacity: 0;
         transform: translateX(50px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -1350,6 +1505,7 @@ p {
         opacity: 0;
         transform: scale(0.9);
     }
+
     to {
         opacity: 1;
         transform: scale(1);
@@ -1373,12 +1529,29 @@ p {
 }
 
 /* Stagger animation delays */
-[data-animate] > *:nth-child(1) { animation-delay: 0.1s; }
-[data-animate] > *:nth-child(2) { animation-delay: 0.2s; }
-[data-animate] > *:nth-child(3) { animation-delay: 0.3s; }
-[data-animate] > *:nth-child(4) { animation-delay: 0.4s; }
-[data-animate] > *:nth-child(5) { animation-delay: 0.5s; }
-[data-animate] > *:nth-child(6) { animation-delay: 0.6s; }
+[data-animate]>*:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+[data-animate]>*:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+[data-animate]>*:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+[data-animate]>*:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+[data-animate]>*:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+[data-animate]>*:nth-child(6) {
+    animation-delay: 0.6s;
+}
 
 /* ==========================================================================
    17. SCROLLBAR STYLING
@@ -1417,15 +1590,15 @@ p {
         --space-12: 3rem;
         --space-10: 2.5rem;
     }
-    
+
     h1 {
         font-size: var(--text-4xl);
     }
-    
+
     h2 {
         font-size: var(--text-3xl);
     }
-    
+
     .section {
         padding: var(--space-12) 0;
     }
