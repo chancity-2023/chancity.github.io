@@ -1,443 +1,296 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Primary SEO Meta Tags -->
-    <title>Tournaments - Chancity Open Kabaddi | Register Your Team</title>
-    <meta name="title" content="Tournaments - Chancity Open Kabaddi | Register Your Team">
-    <meta name="description"
-        content="Chancity Open Kabaddi Tournament - Annual competition hosted by Chancity Sports Club in Karnataka. View details, past winners, rules, and register your team.">
-    <meta name="keywords"
-        content="Chancity Open Kabaddi Tournament, Kabaddi Competition Karnataka, Sports Tournament Bengaluru, Register Kabaddi Team">
-    <meta name="author" content="Chancity Sports Club">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://chancitysportsclub.com/tournaments.html">
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://chancitysportsclub.com/tournaments.html">
-    <meta property="og:title" content="Chancity Open Kabaddi Tournament">
-    <meta property="og:description"
-        content="Annual Kabaddi competition. View details, past winners, and register your team for glory!">
-    <meta property="og:image" content="https://chancitysportsclub.com/assets/cropped_circle_image.png">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Chancity Open Kabaddi Tournament">
-    <meta name="twitter:description"
-        content="Annual Kabaddi competition. View details, past winners, and register your team for glory!">
-    <meta name="twitter:image" content="https://chancitysportsclub.com/assets/cropped_circle_image.png">
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/cropped_circle_image.png">
-
-    <!-- Stylesheets -->
+    <title>Tournaments - Chancity Open Kabaddi Championship | Register Your Team</title>
+    <meta name="description" content="Register for Chancity Open Kabaddi Championship 2025. View tournament details, rules, prizes, and past winners.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/premium-effects.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Event Schema -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "SportsEvent",
-        "name": "Chancity Open Kabaddi Tournament",
-        "description": "Annual open Kabaddi competition hosted by Chancity Sports Club",
-        "sport": "Kabaddi",
-        "organizer": {
-            "@type": "SportsOrganization",
-            "name": "Chancity Sports Club",
-            "url": "https://chancitysportsclub.com"
-        },
-        "location": {
-            "@type": "Place",
-            "name": "G.H.P.S Channasandra",
-            "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Bengaluru",
-                "addressRegion": "Karnataka",
-                "addressCountry": "IN"
-            }
-        },
-        "eventStatus": "https://schema.org/EventScheduled"
-    }
-    </script>
+    <link rel="icon" type="image/jpeg" href="assets/chancity_logo_icon.jpg">
 </head>
-
-
 <body>
     <!-- Header -->
-    <header>
+    <header class="header" id="header">
         <div class="container">
             <nav class="navbar">
                 <a href="index.html" class="logo">
-                    <img src="assets/cropped_circle_image.png" alt="Chancity Sports Club Logo" width="50" height="50"
-                        class="logo-image" onerror="this.style.display='none';">
+                    <img src="assets/chancity_logo_icon.jpg" alt="Chancity Sports Club" class="logo-image">
                     <div class="logo-text">
-                        <span class="logo-title">Kabbadi</span>
+                        <span class="logo-title">Chancity</span>
+                        <span class="logo-subtitle">Sports Club</span>
                     </div>
                 </a>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html" class="active">About Us</a></li>
-                    <li><a href="teams.html">Teams & Coaches</a></li>
-                    <li><a href="tournaments.html">Tournaments</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="registration.html">Register</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="teams.html" class="nav-link">Teams</a></li>
+                    <li><a href="tournaments.html" class="nav-link active">Tournaments</a></li>
+                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
                 </ul>
-                <div class="social-icons">
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.youtube.com/@chancitysportsclub" aria-label="YouTube"><i
-                            class="fab fa-youtube"></i></a>
-                    <a href="https://www.instagram.com/chan_city_sports_club/?hl=en" aria-label="Instagram"><i
-                            class="fab fa-instagram"></i></a>
-                </div>
-                <div class="hamburger">
+                
+                <a href="registration.html" class="nav-cta">Join Now</a>
+                
+                <button class="menu-toggle" id="menuToggle">
                     <span></span>
                     <span></span>
                     <span></span>
-                </div>
+                </button>
             </nav>
         </div>
     </header>
 
-    <!-- Page Header -->
-    <section class="page-header">
+    <!-- Page Hero -->
+    <section class="hero" style="min-height: 60vh;">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <span class="section-subtitle">Compete With The Best</span>
+            <h1 class="hero-title" style="font-size: clamp(2rem, 6vw, 3.5rem);">
+                <span class="text-gradient">Tournaments</span> 2025
+            </h1>
+            <p class="hero-description">
+                Showcase your skills on the grand stage. Compete with top teams from across Karnataka.
+            </p>
+        </div>
+    </section>
+
+    <!-- Featured Tournament -->
+    <section class="section bg-secondary">
         <div class="container">
-            <h1>Tournaments</h1>
-            <p>Ready To Fight - Where Champions Are Made</p>
-            <div class="breadcrumb">
-                <a href="index.html">Home</a>
-                <span>/</span>
-                <span>Tournaments</span>
+            <div class="section-header">
+                <span class="section-subtitle">Flagship Event</span>
+                <h2 class="section-title">Chancity Open Kabaddi Championship</h2>
+            </div>
+            
+            <div class="tournament-card tournament-card-featured" style="max-width: 1000px; margin: 0 auto;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-8); align-items: center;">
+                    <div>
+                        <span class="tournament-badge">Registration Open</span>
+                        <h3 style="font-size: var(--text-3xl); margin-bottom: var(--space-4);">Chancity Open Kabaddi Championship 2025</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: var(--space-6);">
+                            The biggest Kabaddi tournament in Bengaluru. Bring your team and compete for glory and exciting prizes.
+                        </p>
+                        
+                        <div class="tournament-details" style="margin-bottom: var(--space-6);">
+                            <div class="tournament-detail">
+                                <i class="fas fa-calendar"></i>
+                                <span><strong>Date:</strong> January</span>
+                            </div>
+                            <div class="tournament-detail">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span><strong>Venue:</strong> G.H.P.S Channasandra, Bengaluru</span>
+                            </div>
+                            <div class="tournament-detail">
+                                <i class="fas fa-trophy"></i>
+                                <span><strong>Prize Pool:</strong> cash</span>
+                            </div>
+                            <div class="tournament-detail">
+                                <i class="fas fa-user-friends"></i>
+                                <span><strong>Teams:</strong> 30+ teams expected</span>
+                            </div>
+                            <div class="tournament-detail">
+                                <i class="fas fa-rupee-sign"></i>
+                                <span><strong>Entry Fee:</strong> ₹501 per team</span>
+                            </div>
+                        </div>
+                        
+                        <a href="registration.html" class="btn btn-primary btn-lg">
+                            <i class="fas fa-edit"></i>
+                            Register Your Team
+                        </a>
+                    </div>
+                    <div>
+                        <img src="assets/tournament-action.png" alt="Tournament Action" style="border-radius: var(--radius-xl); width: 100%;">
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Hero Image Section -->
-    <div style="width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-        <img src="assets/tournament-action.png" alt="Kabaddi Tournament Action"
-            style="width: 100%; border-radius: 20px; box-shadow: var(--shadow-xl); margin: -50px auto 0;"
-            data-animate="fade-up">
-    </div>
-
-    <!-- Main Tournament Section -->
-    <section class="section">
+    <!-- Rules Section -->
+    <section class="section bg-secondary">
         <div class="container">
-            <div class="tournament-info">
-                <h2 class="tournament-title">Chancity Open Kabaddi Tournament</h2>
-                <p class="tournament-subtitle">Annual Open Competition - Ready To Fight!</p>
-                <p style="max-width: 800px; margin: 0 auto;">
-                    The Chancity Open Kabaddi Tournament is our flagship annual event, bringing together
-                    the best Kabaddi teams from across the region. Hosted by Chancity Sports Club, this
-                    prestigious competition has become a highlight in the sporting calendar, showcasing
-                    exceptional talent and intense competition.
+            <div class="section-header">
+                <span class="section-subtitle">Important Information</span>
+                <h2 class="section-title">Tournament Rules</h2>
+            </div>
+            
+            <div class="grid grid-2" data-animate>
+                <div class="card">
+                    <div class="card-content">
+                        <h4 class="card-title" style="display: flex; align-items: center; gap: var(--space-3);">
+                            <i class="fas fa-users" style="color: var(--gold-400);"></i>
+                            Team Composition
+                        </h4>
+                        <ul style="color: var(--text-secondary); padding-left: var(--space-6); margin-top: var(--space-4);">
+                            <li style="margin-bottom: var(--space-2);">12 players per team (7 starting + 5 substitutes)</li>
+                            <li style="margin-bottom: var(--space-2);">All players must have valid ID proof</li>
+                            <li style="margin-bottom: var(--space-2);">Team manager/coach required</li>
+                            <li>Medical certificate mandatory for all players</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-content">
+                        <h4 class="card-title" style="display: flex; align-items: center; gap: var(--space-3);">
+                            <i class="fas fa-clock" style="color: var(--gold-400);"></i>
+                            Match Format
+                        </h4>
+                        <ul style="color: var(--text-secondary); padding-left: var(--space-6); margin-top: var(--space-4);">
+                            <li style="margin-bottom: var(--space-2);">Standard Kabaddi rules (AKFI approved)</li>
+                            <li style="margin-bottom: var(--space-2);">40 minutes per match (2 halves of 20 min)</li>
+                            <li style="margin-bottom: var(--space-2);">5 minutes break between halves</li>
+                            <li>Extra time in case of tie (5 minutes)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-content">
+                        <h4 class="card-title" style="display: flex; align-items: center; gap: var(--space-3);">
+                            <i class="fas fa-tshirt" style="color: var(--gold-400);"></i>
+                            Equipment & Kit
+                        </h4>
+                        <ul style="color: var(--text-secondary); padding-left: var(--space-6); margin-top: var(--space-4);">
+                            <li style="margin-bottom: var(--space-2);">Team jerseys with numbers mandatory</li>
+                            <li style="margin-bottom: var(--space-2);">Proper sports shoes required</li>
+                            <li style="margin-bottom: var(--space-2);">Knee pads and ankle support recommended</li>
+                            <li>No jewelry or accessories allowed</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-content">
+                        <h4 class="card-title" style="display: flex; align-items: center; gap: var(--space-3);">
+                            <i class="fas fa-gavel" style="color: var(--gold-400);"></i>
+                            Conduct & Fair Play
+                        </h4>
+                        <ul style="color: var(--text-secondary); padding-left: var(--space-6); margin-top: var(--space-4);">
+                            <li style="margin-bottom: var(--space-2);">Umpire decisions are final</li>
+                            <li style="margin-bottom: var(--space-2);">Zero tolerance for misconduct</li>
+                            <li style="margin-bottom: var(--space-2);">Teams must report 30 min before match</li>
+                            <li>Fair play awards for best conduct</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section bg-secondary">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Limited Spots Available</span>
+                <h2 class="section-title">Register Your Team Today</h2>
+                <p class="section-description">
+                    Don't miss the opportunity to compete in Karnataka's premier Kabaddi tournament.
                 </p>
-                <div class="tournament-details">
-                    <div class="detail-card">
-                        <h4><i class="fas fa-calendar-alt"></i> Event Date</h4>
-                        <p>Annual Event</p>
-                        <p style="font-size: 0.85rem; opacity: 0.8;">Dates announced each year</p>
-                    </div>
-                    <div class="detail-card">
-                        <h4><i class="fas fa-map-marker-alt"></i> Venue</h4>
-                        <p>G.H.P.S Channasandra</p>
-                        <p style="font-size: 0.85rem; opacity: 0.8;">Specific venue TBA</p>
-                    </div>
-                    <div class="detail-card">
-                        <h4><i class="fas fa-users"></i> Categories</h4>
-                        <p>Senior & Junior</p>
-                        <p style="font-size: 0.85rem; opacity: 0.8;">Men's divisions</p>
-                    </div>
-                    <div class="detail-card">
-                        <h4><i class="fas fa-trophy"></i> Awards</h4>
-                        <p>Trophies</p>
-                        <p style="font-size: 0.85rem; opacity: 0.8;">Cash prizes for winners</p>
-                    </div>
-                </div>
-                <a href="registration.html" class="btn btn-primary" style="margin-top: 30px;">Register Your Team Now</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Tournament Format Section -->
-    <section id="rules" class="section section-dark">
-        <div class="container">
-            <div class="section-title">
-                <h2>Tournament Format & Rules</h2>
-                <p class="section-subtitle">Fair play, competitive spirit, and exciting matches</p>
-            </div>
-            <div class="about-features">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-clipboard-list"></i>
-                    </div>
-                    <h4>Format</h4>
-                    <p style="color: rgb(14, 13, 13);">
-                        The tournament follows a league-cum-knockout format. Teams are divided into
-                        groups for the initial rounds, followed by knockout stages leading to the
-                        grand finale. Each match consists of two halves of 20 minutes each.
-                    </p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-book"></i>
-                    </div>
-                    <h4>Rules</h4>
-                    <p style="color: rgb(14, 13, 13);">
-                        All matches follow standard Kabaddi Federation rules. Teams must have 7 players
-                        on the mat at all times. Official referees oversee all matches to ensure fair
-                        play and adherence to regulations.
-                    </p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-id-card"></i>
-                    </div>
-                    <h4>Eligibility</h4>
-                    <p style="color: rgb(14, 13, 13);">
-                        Open to all registered Kabaddi teams and school/college teams. Age categories
-                        apply for junior divisions. Valid ID and registration documents required.
-                        Team rosters must be submitted before the deadline.
-                    </p>
+                <div class="hero-cta" style="margin-top: var(--space-8);">
+                    <a href="registration.html" class="btn btn-primary btn-lg">
+                        <i class="fas fa-edit"></i>
+                        Register Now
+                    </a>
+                    <a href="contact.html" class="btn btn-outline btn-lg">
+                        Contact For Queries
+                    </a>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Categories Section -->
-    <section class="section">
-        <div class="container">
-            <div class="section-title">
-                <h2>Tournament Categories</h2>
-                <p class="section-subtitle">Multiple divisions for competitive balance</p>
-            </div>
-            <div class="contact-container" style="grid-template-columns: 1fr 1fr;">
-                <div class="contact-form" style="background: linear-gradient(135deg, #8B0000, #5c0000); color: white;">
-                    <h3 style="color: var(--secondary-color); margin-bottom: 20px;">
-                        <i class="fas fa-user-friends"></i> Senior Category
-                    </h3>
-                    <ul style="list-style: disc; padding-left: 20px;">
-                        <li style="margin-bottom: 15px;">Open to players aged 18 and above</li>
-                        <li style="margin-bottom: 15px;">Maximum 12 players per team roster</li>
-                        <li style="margin-bottom: 15px;">7 players on mat, 5 substitutes</li>
-                        <li style="margin-bottom: 15px;">Standard mat dimensions (13m x 10m)</li>
-                        <li style="margin-bottom: 15px;">12-minute matches (two 6-min halves)</li>
-                    </ul>
-                    <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.9;">
-                        The premier category featuring the best Kabaddi talent in the region.
-                        Intense competition and highest level of play.
-                    </p>
-                </div>
-                <div class="contact-form"
-                    style="background: linear-gradient(135deg, var(--secondary-color), #c19119); color: #1a1a1a;">
-                    <h3 style="color: var(--primary-color); margin-bottom: 20px;">
-                        <i class="fas fa-child"></i> Junior Category
-                    </h3>
-                    <ul style="list-style: disc; padding-left: 20px;">
-                        <li style="margin-bottom: 15px;">For players under 18 years of age</li>
-                        <li style="margin-bottom: 15px;">Maximum 10 players per team roster</li>
-                        <li style="margin-bottom: 15px;">7 players on mat, 3 substitutes</li>
-                        <li style="margin-bottom: 15px;">Modified mat dimensions as applicable</li>
-                        <li style="margin-bottom: 15px;">12-minute matches (two 6-min halves)</li>
-                    </ul>
-                    <p style="margin-top: 20px; font-size: 0.9rem;">
-                        Nurturing young talent and preparing future champions. Age verification
-                        documents required for all junior participants.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Past Winners Section -->
-    <section class="section section-dark">
-        <div class="container">
-            <div class="section-title">
-                <h2>Hall of Champions</h2>
-                <p class="section-subtitle">Celebrating our past winners and their achievements</p>
-            </div>
-            <div class="past-tournaments">
-                <div class="winner-card">
-                    <div>
-                        <span class="winner-year">2023</span>
-                        <p style="color: #666; margin: 0;">Senior Category</p>
-                    </div>
-                    <div class="winner-name">Champion Team Name</div>
-                    <div style="text-align: right;">
-                        <span
-                            style="background: var(--secondary-color); padding: 5px 15px; border-radius: 20px; font-size: 0.85rem;">
-                            🏆 Winner
-                        </span>
-                    </div>
-                </div>
-                <div class="winner-card">
-                    <div>
-                        <span class="winner-year">2023</span>
-                        <p style="color: #666; margin: 0;">Junior Category</p>
-                    </div>
-                    <div class="winner-name">Junior Champion Team</div>
-                    <div style="text-align: right;">
-                        <span
-                            style="background: var(--secondary-color); padding: 5px 15px; border-radius: 20px; font-size: 0.85rem;">
-                            🏆 Winner
-                        </span>
-                    </div>
-                </div>
-                <div class="winner-card">
-                    <div>
-                        <span class="winner-year">2022</span>
-                        <p style="color: #666; margin: 0;">Senior Category</p>
-                    </div>
-                    <div class="winner-name">Previous Champion Team</div>
-                    <div style="text-align: right;">
-                        <span
-                            style="background: var(--secondary-color); padding: 5px 15px; border-radius: 20px; font-size: 0.85rem;">
-                            🏆 Winner
-                        </span>
-                    </div>
-                </div>
-                <div class="winner-card">
-                    <div>
-                        <span class="winner-year">2022</span>
-                        <p style="color: #666; margin: 0;">Junior Category</p>
-                    </div>
-                    <div class="winner-name">Previous Junior Champion</div>
-                    <div style="text-align: right;">
-                        <span
-                            style="background: var(--secondary-color); padding: 5px 15px; border-radius: 20px; font-size: 0.85rem;">
-                            🏆 Winner
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <p style="text-align: center; color: #aaa; margin-top: 30px;">
-                <em>Past tournament records are updated annually. Contact us for historical data.</em>
-            </p>
-        </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section class="section">
-        <div class="container">
-            <div class="section-title">
-                <h2>Tournament Gallery</h2>
-                <p class="section-subtitle">Moments from previous tournaments</p>
-            </div>
-            <div class="team-grid" style="grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));">
-                <div class="team-card" style="overflow: hidden;">
-                    <img src="images/tournament-1.jpg" alt="Tournament Action 1" style="height: 200px;"
-                        onerror="this.style.background='linear-gradient(135deg, #8B0000, #DAA520)'; this.style.height='200px';">
-                </div>
-                <div class="team-card" style="overflow: hidden;">
-                    <img src="images/tournament-2.jpg" alt="Tournament Action 2" style="height: 200px;"
-                        onerror="this.style.background='linear-gradient(135deg, #5c0000, #c19119)'; this.style.height='200px';">
-                </div>
-                <div class="team-card" style="overflow: hidden;">
-                    <img src="images/tournament-3.jpg" alt="Tournament Action 3" style="height: 200px;"
-                        onerror="this.style.background='linear-gradient(135deg, #DAA520, #8B0000)'; this.style.height='200px';">
-                </div>
-                <div class="team-card" style="overflow: hidden;">
-                    <img src="images/tournament-4.jpg" alt="Tournament Award Ceremony" style="height: 200px;"
-                        onerror="this.style.background='linear-gradient(135deg, #c19119, #5c0000)'; this.style.height='200px';">
-                </div>
-            </div>
-            <p style="text-align: center; color: #666; margin-top: 30px;">
-                <em>More photos coming soon. Follow us on social media for live updates during tournaments.</em>
-            </p>
-        </div>
-    </section>
-
-    <!-- Live Score Placeholder -->
-
-
-    <!-- Registration CTA -->
-    <section class="section">
-        <div class="container text-center">
-            <h2 style="color: var(--primary-color); margin-bottom: 1rem;">Ready to Compete?</h2>
-            <p style="color: #666; max-width: 600px; margin: 0 auto 2rem;">
-                Don't miss your chance to be part of the Chancity Open Kabaddi Tournament.
-                Register your team today and join the competition!
-            </p>
-            <a href="registration.html" class="btn btn-primary">Register Now</a>
-            <a href="contact.html" class="btn btn-secondary"
-                style="border-color: var(--primary-color); color: var(--primary-color);">Contact for Info</a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer class="footer">
         <div class="container">
-            <div class="footer-content" style="grid-template-columns: 2fr 1fr 1fr;">
-                <div class="footer-about">
-                    <div class="logo">
-                        <img src="assets/cropped_circle_image.png" alt="Chancity Sports Club Logo" width="50"
-                            height="50" class="logo-image" onerror="this.style.display='none';">
-                        <div class="logo-text">
-                            <span class="logo-title" style="color: white;">Chancity Sports Club</span>
-                            <span class="logo-motto">Ready To Fight</span>
-
-                        </div>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="assets/chancity_logo_icon.jpg" alt="Chancity Sports Club">
+                        <span class="footer-logo-text">Chancity</span>
                     </div>
-                    <p>The official Kabaddi team of G.H.P.S Government School, dedicated to nurturing champions
-                        through discipline, teamwork, and competitive excellence.</p>
+                    <p class="footer-description">
+                        Building champions through discipline, dedication, and teamwork.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="footer-social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/chan_city_sports_club/" class="footer-social-link" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@chancitysportsclub" class="footer-social-link" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
                 </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="teams.html">Teams & Coaches</a></li>
-                        <li><a href="tournaments.html">Tournaments</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="registration.html">Register</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                
+                <div class="footer-column">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html" class="footer-link">About Us</a></li>
+                        <li><a href="teams.html" class="footer-link">Our Team</a></li>
+                        <li><a href="tournaments.html" class="footer-link">Tournaments</a></li>
+                        <li><a href="gallery.html" class="footer-link">Gallery</a></li>
                     </ul>
                 </div>
-                <div class="footer-contact">
-                    <h4>Contact Us</h4>
-                    <p><i class="fas fa-map-marker-alt"></i> G.H.P.S Channasandra, Bengaluru, Karnataka, India</p>
-                    <p><i class="fas fa-phone"></i> +91 9900367717</p>
-                    <p><i class="fas fa-envelope"></i> chancitysportsclub2023@gmail.com</p>
-
-                    <h4 style="margin-top: 25px; margin-bottom: 15px;">Follow Us</h4>
-                    <div class="social-icons" style="display: flex; gap: 10px;">
-                        <a href="javascript:void(0)" onclick="showFbComingSoon()"
-                            style="width: 40px; height: 40px; background-color: #1877F2; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; color: white; transition: all 0.3s ease;"
-                            aria-label="Facebook - Coming Soon" onmouseover="this.style.transform='scale(1.1)'"
-                            onmouseout="this.style.transform='scale(1)'">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="https://www.instagram.com/chan_city_sports_club?igsh=OGU0b2drbWsyMnU5" target="_blank"
-                            style="width: 40px; height: 40px; background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; color: white; transition: all 0.3s ease;"
-                            aria-label="Instagram" onmouseover="this.style.transform='scale(1.1)'"
-                            onmouseout="this.style.transform='scale(1)'">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://youtube.com/@chancitysportsclub?si=qZBz6BVKRmNKrxRE" target="_blank"
-                            style="width: 40px; height: 40px; background-color: #FF0000; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; color: white; transition: all 0.3s ease;"
-                            aria-label="YouTube" onmouseover="this.style.transform='scale(1.1)'"
-                            onmouseout="this.style.transform='scale(1)'">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                    </div>
+                
+                <div class="footer-column">
+                    <h4 class="footer-title">Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="registration.html" class="footer-link">Registration</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                        <li><a href="#" class="footer-link">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4 class="footer-title">Contact</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link"><i class="fas fa-map-marker-alt"></i> G.H.P.S Channasandra, Bengaluru</li>
+                        <li class="footer-link"><i class="fas fa-phone"></i> +91 9900367717</li>
+                    </ul>
                 </div>
             </div>
-
+            
             <div class="footer-bottom">
-                <p>&copy; 2026 Chancity Sports Club. All Rights Reserved. | Ready To Fight</p>
+                <p class="footer-copyright">&copy; 2025 Chancity Sports Club. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
-    <script src="js/error-handlers.js"></script>
-    <script src="js/scroll-animations.js"></script>
-    <script src="js/premium-animations.js"></script>
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+        
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+        
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('header-scrolled');
+            } else {
+                header.classList.remove('header-scrolled');
+            }
+        });
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fadeInUp');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        document.querySelectorAll('.card').forEach(el => {
+            el.style.opacity = '0';
+            observer.observe(el);
+        });
+    </script>
 </body>
-
 </html>

@@ -1,354 +1,370 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Primary SEO Meta Tags -->
-    <title>Register Your Team - Chancity Open Kabaddi Tournament</title>
-    <meta name="title" content="Register Your Team - Chancity Open Kabaddi Tournament">
-    <meta name="description"
-        content="Register your team for the Chancity Open Kabaddi Tournament. Online registration form for schools, clubs, and teams in Karnataka.">
-    <meta name="keywords"
-        content="Chancity Sports Club, Tournament Registration, Kabaddi, Karnataka, Team Registration">
-    <title>Tournament Registration | Chancity Sports Club</title>
+    <title>Registration - Chancity Sports Club | Join Our Team</title>
+    <meta name="description" content="Register for Chancity Sports Club Kabaddi training programs and tournaments. Join Karnataka's premier Kabaddi academy.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/premium-effects.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/jpeg" href="assets/chancity_logo_icon.jpg">
+    
+    <!-- Backend API Scripts -->
+    <script src="js/api-client.js"></script>
+    <script src="js/registration-handler-v2.js"></script>
 </head>
-
-
 <body>
     <!-- Header -->
-    <header>
+    <header class="header" id="header">
         <div class="container">
             <nav class="navbar">
                 <a href="index.html" class="logo">
-                    <img src="assets/cropped_circle_image.png" alt="Chancity Sports Club Logo" width="50" height="50"
-                        class="logo-image" onerror="this.style.display='none';">
+                    <img src="assets/chancity_logo_icon.jpg" alt="Chancity Sports Club" class="logo-image">
                     <div class="logo-text">
-                        <span class="logo-title">Kabbadi</span>
+                        <span class="logo-title">Chancity</span>
+                        <span class="logo-subtitle">Sports Club</span>
                     </div>
                 </a>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="teams.html">Teams & Coaches</a></li>
-                    <li><a href="tournaments.html">Tournaments</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="registration.html" class="active">Register</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="teams.html" class="nav-link">Teams</a></li>
+                    <li><a href="tournaments.html" class="nav-link">Tournaments</a></li>
+                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
                 </ul>
-                <div class="social-icons">
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.youtube.com/@chancitysportsclub" aria-label="YouTube"><i
-                            class="fab fa-youtube"></i></a>
-                    <a href="https://www.instagram.com/chan_city_sports_club/?hl=en" aria-label="Instagram"><i
-                            class="fab fa-instagram"></i></a>
-                </div>
-                <div class="hamburger">
+                
+                <a href="registration.html" class="nav-cta">Join Now</a>
+                
+                <button class="menu-toggle" id="menuToggle">
                     <span></span>
                     <span></span>
                     <span></span>
-                </div>
+                </button>
             </nav>
         </div>
     </header>
 
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <h1>Tournament Registration</h1>
-            <p>Ready To Fight - Register Your Team Today!</p>
-            <div class="breadcrumb">
-                <a href="index.html">Home</a>
-                <span>/</span>
-                <a href="tournaments.html">Tournaments</a>
-                <span>/</span>
-                <span>Register</span>
-            </div>
+    <!-- Page Hero -->
+    <section class="hero" style="min-height: 50vh;">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <span class="section-subtitle">Join The Club</span>
+            <h1 class="hero-title" style="font-size: clamp(2rem, 6vw, 3.5rem);">
+                <span class="text-gradient">Register</span> Now
+            </h1>
+            <p class="hero-description">
+                Take the first step towards becoming a professional Kabaddi player.
+            </p>
         </div>
     </section>
 
     <!-- Registration Info -->
-    <section class="section">
+    <section class="section bg-secondary">
         <div class="container">
-            <div class="tournament-info" style="margin-bottom: 50px;">
-                <h3 class="tournament-title">Chancity Open Kabaddi Tournament</h3>
-                <p class="tournament-subtitle">Team Registration Form</p>
-                <p style="max-width: 700px; margin: 0 auto;">
+            <div class="section-header">
+                <span class="section-subtitle">Tournament Registration</span>
+                <h2 class="section-title">Chancity Open Kabaddi Tournament</h2>
+                <p class="section-description">
                     Complete the form below to register your team for the upcoming tournament.
-                    All fields marked with * are required.
+                    All fields marked with * are required. You will receive a confirmation email
+                    upon successful registration.
                 </p>
+                <div id="backend-status" style="margin-top: var(--space-4); font-size: var(--text-sm);"></div>
             </div>
         </div>
     </section>
 
     <!-- Registration Form -->
-    <section class="section" style="padding-top: 0;">
+    <section class="section">
         <div class="container">
-            <form class="registration-form" id="tournamentRegistration">
-                <!-- Team Information -->
-                <h3
-                    style="color: var(--primary-color); margin-bottom: 25px; border-bottom: 2px solid var(--secondary-color); padding-bottom: 10px;">
-                    <i class="fas fa-users"></i> Team Information
-                </h3>
+            <div class="section-header">
+                <span class="section-subtitle">Fill The Form</span>
+                <h2 class="section-title">Apply Now</h2>
+                <p class="section-description">
+                    Complete the registration form below. We'll get back to you within 24-48 hours.
+                </p>
+            </div>
+            
+            <div class="form-container" data-animate>
+                <form class="registration-form" id="tournamentRegistration">
+                    <!-- Team Information -->
+                    <h3 style="font-size: var(--text-xl); margin-bottom: var(--space-6); color: var(--gold-400); border-bottom: 2px solid var(--gold-500); padding-bottom: var(--space-3);">
+                        <i class="fas fa-users"></i> Team Information
+                    </h3>
 
-                <div class="form-group">
-                    <label for="teamName">Team/School/Club Name *</label>
-                    <input type="text" id="teamName" name="teamName" placeholder="Enter your team or school name"
-                        required>
-                </div>
-
-                <div class="form-row">
                     <div class="form-group">
-                        <label for="category">Category *</label>
-                        <select id="category" name="category" required>
-                            <option value="">Select Category</option>
-                            <option value="senior">Senior (18+ years)</option>
-                            <option value="junior">Junior (Under 18)</option>
-                        </select>
+                        <label class="form-label" for="teamName">Team/School/Club Name *</label>
+                        <input type="text" class="form-input" id="teamName" name="teamName" placeholder="Enter your team or school name" required>
                     </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="category">Category *</label>
+                            <select class="form-select" id="category" name="category" required>
+                                <option value="">Select Category</option>
+                                <option value="senior">Senior</option>
+                                <option value="junior">Junior</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="teamSize">Number of Players *</label>
+                            <select class="form-select" id="teamSize" name="teamSize" required>
+                                <option value="">Select Team Size</option>
+                                <option value="7">7 Players</option>
+                                <option value="8">8 Players</option>
+                                <option value="9">9 Players</option>
+                                <option value="10">10 Players</option>
+                                <option value="11">11 Players</option>
+                                <option value="12">12 Players</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Contact Person Information -->
+                    <h3 style="font-size: var(--text-xl); margin: var(--space-8) 0 var(--space-6); color: var(--gold-400); border-bottom: 2px solid var(--gold-500); padding-bottom: var(--space-3);">
+                        <i class="fas fa-user-tie"></i> Contact Person Details
+                    </h3>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="contactName">Contact Person Name *</label>
+                            <input type="text" class="form-input" id="contactName" name="contactName" placeholder="Full name of team manager/coach" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="designation">Designation *</label>
+                            <select class="form-select" id="designation" name="designation" required>
+                                <option value="">Select Designation</option>
+                                <option value="coach">Coach</option>
+                                <option value="manager">Team Manager</option>
+                                <option value="teacher">Physical Education Teacher</option>
+                                <option value="captain">Team Captain</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="email">Email Address *</label>
+                            <input type="email" class="form-input" id="email" name="email" placeholder="your.email@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="phone">Phone Number *</label>
+                            <input type="tel" class="form-input" id="phone" name="phone" placeholder="+91 XXXXX XXXXX" required>
+                        </div>
+                    </div>
+
                     <div class="form-group">
-                        <label for="teamSize">Number of Players *</label>
-                        <select id="teamSize" name="teamSize" required>
-                            <option value="">Select Team Size</option>
-                            <option value="7">7 Players</option>
-                            <option value="8">8 Players</option>
-                            <option value="9">9 Players</option>
-                            <option value="10">10 Players</option>
-                            <option value="11">11 Players</option>
-                            <option value="12">12 Players</option>
-                        </select>
+                        <label class="form-label" for="altPhone">Alternate Phone Number</label>
+                        <input type="tel" class="form-input" id="altPhone" name="altPhone" placeholder="+91 XXXXX XXXXX (Optional)">
                     </div>
-                </div>
 
-                <!-- Contact Person Information -->
-                <h3
-                    style="color: var(--primary-color); margin: 40px 0 25px; border-bottom: 2px solid var(--secondary-color); padding-bottom: 10px;">
-                    <i class="fas fa-user-tie"></i> Contact Person Details
-                </h3>
+                    <!-- Team Members -->
+                    <h3 style="font-size: var(--text-xl); margin: var(--space-8) 0 var(--space-6); color: var(--gold-400); border-bottom: 2px solid var(--gold-500); padding-bottom: var(--space-3);">
+                        <i class="fas fa-list-ol"></i> Team Members List
+                    </h3>
 
-                <div class="form-row">
                     <div class="form-group">
-                        <label for="contactName">Contact Person Name *</label>
-                        <input type="text" id="contactName" name="contactName"
-                            placeholder="Full name of team manager/coach" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="designation">Designation *</label>
-                        <select id="designation" name="designation" required>
-                            <option value="">Select Designation</option>
-                            <option value="coach">Coach</option>
-                            <option value="manager">Team Manager</option>
-                            <option value="teacher">Physical Education Teacher</option>
-                            <option value="captain">Team Captain</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="email">Email Address *</label>
-                        <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Phone Number *</label>
-                        <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX" required>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="altPhone">Alternate Phone Number</label>
-                    <input type="tel" id="altPhone" name="altPhone" placeholder="+91 XXXXX XXXXX (Optional)">
-                </div>
-
-                <!-- Team Members -->
-                <h3
-                    style="color: var(--primary-color); margin: 40px 0 25px; border-bottom: 2px solid var(--secondary-color); padding-bottom: 10px;">
-                    <i class="fas fa-list-ol"></i> Team Members List
-                </h3>
-
-                <div class="form-group">
-                    <label for="players">Player Names and Details *</label>
-                    <textarea id="players" name="players" rows="8" placeholder="Please list all players in the following format (one per line):
+                        <label class="form-label" for="players">Player Names and Details *</label>
+                        <textarea class="form-textarea" id="players" name="players" rows="8" placeholder="Please list all players in the following format (one per line):
 
 1. Full Name - Age - Position (Raider/Defender/All-Rounder)
 2. Full Name - Age - Position
 3. Full Name - Age - Position
 ... (continue for all players)" required></textarea>
-                    <p style="color: #666; font-size: 0.85rem; margin-top: 8px;">
-                        <i class="fas fa-info-circle"></i> Include Captain's name first. Maximum 12 players for Senior,
-                        10 for Junior category.
-                    </p>
-                </div>
+                        <p style="color: var(--text-muted); font-size: var(--text-sm); margin-top: var(--space-2);">
+                            <i class="fas fa-info-circle"></i> Include Captain's name first. Maximum 12 players for Senior, 10 for Junior category.
+                        </p>
+                    </div>
 
-                <!-- Terms and Conditions -->
-                <div class="form-group" style="margin-top: 30px;">
-                    <label style="display: flex; align-items: flex-start; gap: 10px; cursor: pointer;">
-                        <input type="checkbox" id="terms" name="terms" required style="width: auto; margin-top: 5px;">
-                        <span style="font-weight: normal; font-size: 0.95rem;">
-                            I confirm that all information provided is accurate. I agree to the
-                            <a href="tournaments.html#rules"
-                                style="color: var(--primary-color); text-decoration: underline;">tournament rules and
-                                regulations</a>
-                            and understand that any false information may result in disqualification. *
-                        </span>
-                    </label>
-                </div>
+                    <!-- Terms and Conditions -->
+                    <div class="form-group" style="margin-top: var(--space-8);">
+                        <label style="display: flex; align-items: flex-start; gap: var(--space-3); cursor: pointer;">
+                            <input type="checkbox" id="terms" name="terms" required style="margin-top: 4px;">
+                            <span style="color: var(--text-secondary); font-size: var(--text-sm);">
+                                I confirm that all information provided is accurate. I agree to the
+                                <a href="tournaments.html" style="color: var(--gold-400); text-decoration: underline;">tournament rules and regulations</a>
+                                and understand that any false information may result in disqualification. *
+                            </span>
+                        </label>
+                    </div>
 
-                <div class="form-group">
-                    <label style="display: flex; align-items: flex-start; gap: 10px; cursor: pointer;">
-                        <input type="checkbox" id="newsletter" name="newsletter" style="width: auto; margin-top: 5px;">
-                        <span style="font-weight: normal; font-size: 0.95rem;">
-                            I would like to receive updates about future tournaments and club news via email.
-                        </span>
-                    </label>
-                </div>
+                    <div class="form-group">
+                        <label style="display: flex; align-items: flex-start; gap: var(--space-3); cursor: pointer;">
+                            <input type="checkbox" id="newsletter" name="newsletter" style="margin-top: 4px;">
+                            <span style="color: var(--text-secondary); font-size: var(--text-sm);">
+                                I would like to receive updates about future tournaments and club news via email.
+                            </span>
+                        </label>
+                    </div>
 
-                <!-- Submit Button -->
-                <div class="form-submit">
-                    <button type="submit" class="btn btn-primary" id="submitBtn">
-                        <i class="fas fa-paper-plane"></i> Submit Registration
-                    </button>
-                    <p style="color: #666; font-size: 0.85rem; margin-top: 15px;" id="submitMessage">
-                        Please ensure all information is accurate before submitting.
-                    </p>
-                </div>
-            </form>
+                    <div class="form-group" style="text-align: center; margin-top: var(--space-8);">
+                        <button type="submit" id="submitBtn" class="btn btn-primary btn-lg" style="min-width: 250px;">
+                            <i class="fas fa-paper-plane"></i>
+                            Submit Registration
+                        </button>
+                        <div id="submitMessage" style="margin-top: var(--space-4);"></div>
+                    </div>
+                </form>
+            </div>
         </div>
     </section>
 
-    <!-- Important Notes -->
-    <section class="section section-dark">
+    <!-- Contact Section -->
+    <section class="section bg-secondary">
         <div class="container">
-            <div class="section-title">
-                <h2>Important Information</h2>
-                <p class="section-subtitle">Please read before submitting your registration</p>
+            <div class="section-header">
+                <span class="section-subtitle">Need Help?</span>
+                <h2 class="section-title">Contact Us</h2>
+                <p class="section-description">
+                    Have questions about registration? We're here to help.
+                </p>
             </div>
-            <div class="about-features">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-file-alt"></i>
+            
+            <div class="grid grid-3" data-animate>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
                     </div>
-                    <h4>Required Documents</h4>
-                    <ul style="text-align: left; padding-left: 20px;">
-                        <li style="color: black;">Valid ID proof for all players</li>
-                        <li style="color: black;">Age certificates for Junior category</li>
-                        <li style="color: black;">School/Club authorization letter</li>
-                        <li style="color: black;">Passport-size photos of players</li>
-                    </ul>
+                    <h4 class="contact-title">Phone</h4>
+                    <p class="contact-text">+91 9900367717<br>+91 8123419235</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-calendar-check"></i>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
                     </div>
-                    <h4>Registration Deadline</h4>
-                    <p style="color: black;">
-                        Registration closes one week before the tournament date.
-                        Early registration is recommended as spots are limited.
-                        Late entries may be accepted at the organizers' discretion.
-                    </p>
+                    <h4 class="contact-title">Email</h4>
+                    <p class="contact-text">chancitysportsclub2023@gmail.com</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-envelope-open-text"></i>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
                     </div>
-                    <h4>After Registration</h4>
-                    <p style="color: black;">
-                        You will receive a confirmation email with further instructions.
-                        Document verification will be scheduled before the tournament.
-                        Contact us if you don't receive confirmation within 48 hours.
-                    </p>
+                    <h4 class="contact-title">Visit Us</h4>
+                    <p class="contact-text">G.H.P.S Channasandra<br>Bengaluru, Karnataka</p>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Contact CTA -->
-    <section class="section">
-        <div class="container text-center">
-            <h2 style="color: var(--primary-color); margin-bottom: 1rem;">Need Help?</h2>
-            <p style="color: #666; max-width: 600px; margin: 0 auto 2rem;">
-                If you have any questions about the registration process or need assistance,
-                please don't hesitate to contact us.
-            </p>
-            <a href="contact.html" class="btn btn-primary">Contact Us</a>
-            <a href="tournaments.html" class="btn btn-secondary"
-                style="border-color: var(--primary-color); color: var(--primary-color);">View Tournament Details</a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer class="footer">
         <div class="container">
-            <div class="footer-content" style="grid-template-columns: 2fr 1fr 1fr;">
-                <div class="footer-about">
-                    <div class="logo">
-                        <img src="assets/cropped_circle_image.png" alt="Chancity Sports Club Logo" width="50"
-                            height="50" class="logo-image" onerror="this.style.display='none';">
-                        <div class="logo-text">
-                            <span class="logo-title" style="color: white;">Chancity Sports Club</span>
-                            <span class="logo-motto">Ready To Fight</span>
-                        </div>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="assets/chancity_logo_icon.jpg" alt="Chancity Sports Club">
+                        <span class="footer-logo-text">Chancity</span>
                     </div>
-                    <p>The official Kabaddi team of G.H.P.S Government School, dedicated to nurturing champions
-                        through discipline, teamwork, and competitive excellence.</p>
+                    <p class="footer-description">
+                        Building champions through discipline, dedication, and teamwork.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="footer-social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/chan_city_sports_club/" class="footer-social-link" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@chancitysportsclub" class="footer-social-link" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
                 </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="teams.html">Teams & Coaches</a></li>
-                        <li><a href="tournaments.html">Tournaments</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="registration.html">Register</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                
+                <div class="footer-column">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html" class="footer-link">About Us</a></li>
+                        <li><a href="teams.html" class="footer-link">Our Team</a></li>
+                        <li><a href="tournaments.html" class="footer-link">Tournaments</a></li>
+                        <li><a href="gallery.html" class="footer-link">Gallery</a></li>
                     </ul>
                 </div>
-                <div class="footer-contact">
-                    <h4>Contact Us</h4>
-                    <p><i class="fas fa-map-marker-alt"></i> G.H.P.S Channasandra, Bengaluru, Karnataka, India</p>
-                    <p><i class="fas fa-phone"></i> +91 9900367717</p>
-                    <p><i class="fas fa-envelope"></i> chancitysportsclub2023@gmail.com</p>
-
-                    <h4 style="margin-top: 25px; margin-bottom: 15px;">Follow Us</h4>
-                    <div class="social-icons" style="display: flex; gap: 10px;">
-                        <a href="javascript:void(0)" onclick="showFbComingSoon()"
-                            style="width: 40px; height: 40px; background-color: #1877F2; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; color: white; transition: all 0.3s ease;"
-                            aria-label="Facebook - Coming Soon" onmouseover="this.style.transform='scale(1.1)'"
-                            onmouseout="this.style.transform='scale(1)'">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="https://www.instagram.com/chan_city_sports_club?igsh=OGU0b2drbWsyMnU5" target="_blank"
-                            style="width: 40px; height: 40px; background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; color: white; transition: all 0.3s ease;"
-                            aria-label="Instagram" onmouseover="this.style.transform='scale(1.1)'"
-                            onmouseout="this.style.transform='scale(1)'">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://youtube.com/@chancitysportsclub?si=qZBz6BVKRmNKrxRE" target="_blank"
-                            style="width: 40px; height: 40px; background-color: #FF0000; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; color: white; transition: all 0.3s ease;"
-                            aria-label="YouTube" onmouseover="this.style.transform='scale(1.1)'"
-                            onmouseout="this.style.transform='scale(1)'">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                    </div>
+                
+                <div class="footer-column">
+                    <h4 class="footer-title">Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="registration.html" class="footer-link">Registration</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4 class="footer-title">Contact</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link"><i class="fas fa-map-marker-alt"></i> G.H.P.S Channasandra, Bengaluru</li>
+                        <li class="footer-link"><i class="fas fa-phone"></i> +91 9900367717</li>
+                    </ul>
                 </div>
             </div>
-
+            
             <div class="footer-bottom">
-                <p>&copy; 2026 Chancity Sports Club. All Rights Reserved. | Ready To Fight</p>
+                <p class="footer-copyright">&copy; 2025 Chancity Sports Club. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
-    <script src="js/error-handlers.js"></script>
-    <script src="js/scroll-animations.js"></script>
-    <script src="js/registration-handler-v2.js"></script>
+    <script>
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+        
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+        
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('header-scrolled');
+            } else {
+                header.classList.remove('header-scrolled');
+            }
+        });
+        
+        // Animate on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fadeInUp');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        document.querySelectorAll('.card, .form-container, .contact-card').forEach(el => {
+            el.style.opacity = '0';
+            observer.observe(el);
+        });
+        
+        // Check backend status
+        async function checkBackendStatus() {
+            const statusDiv = document.getElementById('backend-status');
+            if (!statusDiv) return;
+            
+            try {
+                const response = await fetch('https://gitback-mqnw.onrender.com/health', { 
+                    method: 'GET',
+                    mode: 'cors'
+                });
+                if (response.ok) {
+                    statusDiv.innerHTML = '<span style="color: #22c55e;"><i class="fas fa-check-circle"></i> Backend connected and ready</span>';
+                } else {
+                    statusDiv.innerHTML = '<span style="color: #eab308;"><i class="fas fa-exclamation-triangle"></i> Backend unavailable</span>';
+                }
+            } catch (error) {
+                statusDiv.innerHTML = '<span style="color: #ef4444;"><i class="fas fa-times-circle"></i> Backend offline</span>';
+                console.warn('Backend status check failed:', error);
+            }
+        }
+        
+        // Check backend status after a short delay
+        setTimeout(checkBackendStatus, 2000);
+    </script>
 </body>
-
 </html>

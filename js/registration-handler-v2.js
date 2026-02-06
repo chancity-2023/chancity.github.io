@@ -328,7 +328,9 @@ class RegistrationHandler {
 window.addEventListener('load', () => {
     setTimeout(() => {
         if (document.getElementById('tournamentRegistration')) {
+            console.log('✅ Registration form found. Initializing backend connection...');
             new RegistrationHandler();
+            console.log('✅ Backend handler initialized successfully');
         }
     }, 100);
 });
