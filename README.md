@@ -102,7 +102,7 @@ This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENS
 ## Contact
 
 **Chancity Sports Club**
-- Email: info@chancitysportsclub.com
+- Email: chancitysportsclub2023@gmail.com
 - Location: G.H.P.S Government School, Karnataka, India
 
 ---

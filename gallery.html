@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery - Chancity Sports Club | Match Photos & Highlights</title>
-    <meta name="description" content="Browse photos from Chancity Sports Club matches, tournaments, training sessions, and team celebrations.">
-    
+    <meta name="description"
+        content="Browse photos from Chancity Sports Club matches, tournaments, training sessions, and team celebrations.">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/jpeg" href="assets/chancity_logo_icon.jpg">
-    
+
     <style>
         .gallery-filter {
             display: flex;
@@ -22,7 +26,7 @@
             margin-bottom: var(--space-8);
             flex-wrap: wrap;
         }
-        
+
         .filter-btn {
             padding: var(--space-2) var(--space-5);
             background: var(--bg-tertiary);
@@ -34,20 +38,20 @@
             cursor: pointer;
             transition: var(--transition-base);
         }
-        
+
         .filter-btn:hover,
         .filter-btn.active {
             background: var(--gold-500);
             color: var(--neutral-900);
             border-color: var(--gold-500);
         }
-        
+
         .gallery-masonry {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
             gap: var(--space-4);
         }
-        
+
         .gallery-item {
             position: relative;
             border-radius: var(--radius-lg);
@@ -55,18 +59,18 @@
             cursor: pointer;
             aspect-ratio: 4/3;
         }
-        
+
         .gallery-item img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 0.5s ease;
         }
-        
+
         .gallery-item:hover img {
             transform: scale(1.1);
         }
-        
+
         .gallery-overlay {
             position: absolute;
             inset: 0;
@@ -78,11 +82,11 @@
             justify-content: flex-end;
             padding: var(--space-5);
         }
-        
+
         .gallery-item:hover .gallery-overlay {
             opacity: 1;
         }
-        
+
         .gallery-category {
             display: inline-block;
             background: var(--gold-500);
@@ -95,19 +99,19 @@
             margin-bottom: var(--space-2);
             width: fit-content;
         }
-        
+
         .gallery-title {
             font-size: var(--text-lg);
             font-weight: 600;
             color: var(--neutral-0);
             margin-bottom: var(--space-1);
         }
-        
+
         .gallery-meta {
             font-size: var(--text-sm);
             color: var(--text-muted);
         }
-        
+
         .lightbox {
             display: none;
             position: fixed;
@@ -118,18 +122,18 @@
             align-items: center;
             padding: var(--space-6);
         }
-        
+
         .lightbox.active {
             display: flex;
         }
-        
+
         .lightbox-img {
             max-width: 90%;
             max-height: 90vh;
             object-fit: contain;
             border-radius: var(--radius-lg);
         }
-        
+
         .lightbox-close {
             position: absolute;
             top: var(--space-6);
@@ -139,11 +143,11 @@
             cursor: pointer;
             transition: var(--transition-base);
         }
-        
+
         .lightbox-close:hover {
             color: var(--gold-400);
         }
-        
+
         @media (max-width: 768px) {
             .gallery-masonry {
                 grid-template-columns: 1fr;
@@ -151,6 +155,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Header -->
     <header class="header" id="header">
@@ -163,7 +168,7 @@
                         <span class="logo-subtitle">Sports Club</span>
                     </div>
                 </a>
-                
+
                 <ul class="nav-menu" id="navMenu">
                     <li><a href="index.html" class="nav-link">Home</a></li>
                     <li><a href="about.html" class="nav-link">About</a></li>
@@ -172,9 +177,9 @@
                     <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
                     <li><a href="contact.html" class="nav-link">Contact</a></li>
                 </ul>
-                
+
                 <a href="registration.html" class="nav-cta">Join Now</a>
-                
+
                 <button class="menu-toggle" id="menuToggle">
                     <span></span>
                     <span></span>
@@ -205,7 +210,7 @@
                 <span class="section-subtitle">Browse Collection</span>
                 <h2 class="section-title">Memories In Frames</h2>
             </div>
-            
+
             <!-- Filter Buttons -->
             <div class="gallery-filter">
                 <button class="filter-btn active" data-filter="all">All Photos</button>
@@ -214,7 +219,7 @@
                 <button class="filter-btn" data-filter="team">Team</button>
                 <button class="filter-btn" data-filter="action">Action</button>
             </div>
-            
+
             <!-- Gallery Grid -->
             <div class="gallery-masonry" data-animate>
                 <div class="gallery-item" data-category="tournament" onclick="openLightbox(this)">
@@ -225,7 +230,7 @@
                         <p class="gallery-meta">Chancity Open 2024</p>
                     </div>
                 </div>
-                
+
                 <div class="gallery-item" data-category="team" onclick="openLightbox(this)">
                     <img src="assets/team-huddle.png" alt="Team Huddle">
                     <div class="gallery-overlay">
@@ -234,7 +239,7 @@
                         <p class="gallery-meta">Team Spirit</p>
                     </div>
                 </div>
-                
+
                 <div class="gallery-item" data-category="training" onclick="openLightbox(this)">
                     <img src="assets/training-ground.png" alt="Training Session">
                     <div class="gallery-overlay">
@@ -243,7 +248,7 @@
                         <p class="gallery-meta">Daily Training</p>
                     </div>
                 </div>
-                
+
                 <div class="gallery-item" data-category="tournament" onclick="openLightbox(this)">
                     <img src="assets/tournament-victory.png" alt="Victory Celebration">
                     <div class="gallery-overlay">
@@ -252,7 +257,7 @@
                         <p class="gallery-meta">Winning Moment</p>
                     </div>
                 </div>
-                
+
                 <div class="gallery-item" data-category="action" onclick="openLightbox(this)">
                     <img src="assets/hero-kabaddi-action.png" alt="Kabaddi Action">
                     <div class="gallery-overlay">
@@ -261,7 +266,7 @@
                         <p class="gallery-meta">In Action</p>
                     </div>
                 </div>
-                
+
                 <div class="gallery-item" data-category="team" onclick="openLightbox(this)">
                     <img src="assets/player-portrait.png" alt="Player Portrait">
                     <div class="gallery-overlay">
@@ -270,7 +275,7 @@
                         <p class="gallery-meta">Rahul Kumar</p>
                     </div>
                 </div>
-                
+
                 <div class="gallery-item" data-category="training" onclick="openLightbox(this)">
                     <img src="assets/coach-training.png" alt="Coach Training">
                     <div class="gallery-overlay">
@@ -279,7 +284,7 @@
                         <p class="gallery-meta">Expert Guidance</p>
                     </div>
                 </div>
-                
+
                 <div class="gallery-item" data-category="action" onclick="openLightbox(this)">
                     <img src="assets/tournament-action.png" alt="Match Action">
                     <div class="gallery-overlay">
@@ -288,7 +293,7 @@
                         <p class="gallery-meta">Match Highlight</p>
                     </div>
                 </div>
-                
+
                 <div class="gallery-item" data-category="team" onclick="openLightbox(this)">
                     <img src="assets/team-huddle.png" alt="Team Photo">
                     <div class="gallery-overlay">
@@ -297,7 +302,7 @@
                         <p class="gallery-meta">Full Squad</p>
                     </div>
                 </div>
-                
+
                 <div class="gallery-item" data-category="tournament" onclick="openLightbox(this)">
                     <img src="assets/tournament-victory.png" alt="Trophy">
                     <div class="gallery-overlay">
@@ -306,7 +311,7 @@
                         <p class="gallery-meta">Proud Moment</p>
                     </div>
                 </div>
-                
+
                 <div class="gallery-item" data-category="training" onclick="openLightbox(this)">
                     <img src="assets/training-ground.png" alt="Ground">
                     <div class="gallery-overlay">
@@ -315,7 +320,7 @@
                         <p class="gallery-meta">Home Turf</p>
                     </div>
                 </div>
-                
+
                 <div class="gallery-item" data-category="action" onclick="openLightbox(this)">
                     <img src="assets/hero-kabaddi-action.png" alt="Raid">
                     <div class="gallery-overlay">
@@ -341,12 +346,14 @@
                         Building champions through discipline, dedication, and teamwork.
                     </p>
                     <div class="footer-social">
-                        <a href="#" class="footer-social-link"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/chan_city_sports_club/" class="footer-social-link" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.youtube.com/@chancitysportsclub" class="footer-social-link" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="footer-social-link facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/chan_city_sports_club/" class="footer-social-link instagram"
+                            target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@chancitysportsclub" class="footer-social-link youtube"
+                            target="_blank"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
-                
+
                 <div class="footer-column">
                     <h4 class="footer-title">Quick Links</h4>
                     <ul class="footer-links">
@@ -356,7 +363,7 @@
                         <li><a href="gallery.html" class="footer-link">Gallery</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-column">
                     <h4 class="footer-title">Resources</h4>
                     <ul class="footer-links">
@@ -364,16 +371,17 @@
                         <li><a href="contact.html" class="footer-link">Contact</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-column">
                     <h4 class="footer-title">Contact</h4>
                     <ul class="footer-links">
-                        <li class="footer-link"><i class="fas fa-map-marker-alt"></i> G.H.P.S Channasandra, Bengaluru</li>
+                        <li class="footer-link"><i class="fas fa-map-marker-alt"></i> G.H.P.S Channasandra, Bengaluru
+                        </li>
                         <li class="footer-link"><i class="fas fa-phone"></i> +91 9900367717</li>
                     </ul>
                 </div>
             </div>
-            
+
             <div class="footer-bottom">
                 <p class="footer-copyright">&copy; 2025 Chancity Sports Club. All rights reserved.</p>
             </div>
@@ -390,11 +398,11 @@
         // Mobile Menu Toggle
         const menuToggle = document.getElementById('menuToggle');
         const navMenu = document.getElementById('navMenu');
-        
+
         menuToggle.addEventListener('click', () => {
             navMenu.classList.toggle('active');
         });
-        
+
         // Header scroll effect
         const header = document.getElementById('header');
         window.addEventListener('scroll', () => {
@@ -404,20 +412,20 @@
                 header.classList.remove('header-scrolled');
             }
         });
-        
+
         // Gallery Filter
         const filterBtns = document.querySelectorAll('.filter-btn');
         const galleryItems = document.querySelectorAll('.gallery-item');
-        
+
         filterBtns.forEach(btn => {
             btn.addEventListener('click', () => {
                 // Remove active class from all buttons
                 filterBtns.forEach(b => b.classList.remove('active'));
                 // Add active class to clicked button
                 btn.classList.add('active');
-                
+
                 const filter = btn.getAttribute('data-filter');
-                
+
                 galleryItems.forEach(item => {
                     if (filter === 'all' || item.getAttribute('data-category') === filter) {
                         item.style.display = 'block';
@@ -435,24 +443,24 @@
                 });
             });
         });
-        
+
         // Lightbox
         function openLightbox(element) {
             const img = element.querySelector('img');
             const lightbox = document.getElementById('lightbox');
             const lightboxImg = document.getElementById('lightbox-img');
-            
+
             lightboxImg.src = img.src;
             lightbox.classList.add('active');
             document.body.style.overflow = 'hidden';
         }
-        
+
         function closeLightbox() {
             const lightbox = document.getElementById('lightbox');
             lightbox.classList.remove('active');
             document.body.style.overflow = 'auto';
         }
-        
+
         // Animate on scroll
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -462,11 +470,12 @@
                 }
             });
         }, { threshold: 0.1 });
-        
+
         document.querySelectorAll('.gallery-item, .card').forEach(el => {
             el.style.opacity = '0';
             observer.observe(el);
         });
     </script>
 </body>
+
 </html>
