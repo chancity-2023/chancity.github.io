@@ -22,7 +22,7 @@ class RegistrationHandler {
     async checkRegistrationStatus() {
         try {
             // Add timestamp to prevent caching
-            const response = await fetch(' https://gitback-mqnw.onrender.com/api/admin/settings/public/registration-status?t=' + Date.now());
+            const response = await fetch('https://gitback-mqnw.onrender.com/api/admin/settings/public/registration-status?t=' + Date.now());
             if (response.ok) {
                 const data = await response.json();
                 if (!data.registration_open) {
@@ -409,7 +409,7 @@ class RegistrationHandler {
         this.setLoading(true);
 
         try {
-            const response = await fetch(' https://gitback-mqnw.onrender.com/api/v1/registrations', {
+            const response = await fetch('https://gitback-mqnw.onrender.com/api/v1/registrations', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data)
