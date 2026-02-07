@@ -41,65 +41,64 @@ class RegistrationHandler {
             this.form.style.display = 'none';
         }
 
+        // Add responsive styles for registration closed message
+        this.addClosedMessageStyles();
+
         // Create closed message
         const closedMessage = document.createElement('div');
         closedMessage.id = 'registration-closed-message';
         closedMessage.innerHTML = `
-            <div style="
-                background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-                border: 2px solid #e74c3c;
-                border-radius: 20px;
-                padding: 60px 40px;
-                text-align: center;
-                max-width: 600px;
-                margin: 40px auto;
-                box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            ">
-                <div style="
-                    width: 80px;
-                    height: 80px;
-                    background: linear-gradient(135deg, #e74c3c, #c0392b);
-                    border-radius: 50%;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    margin: 0 auto 30px;
-                ">
-                    <i class="fas fa-lock" style="font-size: 2rem; color: white;"></i>
+            <div class="closed-message-container">
+                <img src="assets/chancity_logo_main.png" alt="Chan City Sports Club Logo" class="closed-logo">
+                
+                <div class="closed-badge">
+                    <i class="fas fa-clock"></i>
+                    <span>Registration Closed</span>
                 </div>
-                <h2 style="
-                    font-family: 'Bebas Neue', sans-serif;
-                    font-size: 2.5rem;
-                    color: #e74c3c;
-                    margin-bottom: 20px;
-                    letter-spacing: 3px;
-                ">REGISTRATIONS CLOSED</h2>
-                <p style="
-                    font-family: 'Poppins', sans-serif;
-                    color: #cbd5e1;
-                    font-size: 1.1rem;
-                    line-height: 1.8;
-                    margin-bottom: 30px;
-                ">
-                    Thank you for your interest in the Chancity Open Kabaddi Tournament!
-                    <br><br>
-                    Registrations are currently closed. Please check back later or follow our social media for updates on the next tournament.
+                
+                <h2 class="closed-heading">Tournament Registration Closed</h2>
+                
+                <p class="closed-text">
+                    Thank you for your interest in the Chancity Open Kabaddi Tournament 2025! 
+                    We appreciate your enthusiasm and passion for the sport.
                 </p>
-                <a href="contact.html" style="
-                    display: inline-block;
-                    background: linear-gradient(135deg, #f5a623, #f7b844);
-                    color: #1a1a2e;
-                    font-family: 'Bebas Neue', sans-serif;
-                    font-size: 1.2rem;
-                    letter-spacing: 2px;
-                    padding: 15px 40px;
-                    border-radius: 50px;
-                    text-decoration: none;
-                    transition: all 0.3s ease;
-                ">
-                    <i class="fas fa-envelope" style="margin-right: 10px;"></i>
-                    CONTACT US
-                </a>
+                
+                <div class="closed-divider">
+                    <span></span>
+                    <i class="fas fa-award"></i>
+                    <span></span>
+                </div>
+                
+                <p class="closed-subtext">
+                    Registrations are currently closed as we prepare for the upcoming tournament season. 
+                    Stay connected with us for updates on future tournaments and events.
+                </p>
+                
+                <div class="closed-actions">
+                    <a href="contact.html" class="closed-contact-btn primary">
+                        <i class="fas fa-envelope"></i>
+                        Contact Us
+                    </a>
+                    <a href="index.html" class="closed-contact-btn secondary">
+                        <i class="fas fa-home"></i>
+                        Back to Home
+                    </a>
+                </div>
+                
+                <div class="closed-social">
+                    <span class="closed-social-text">Follow us for updates</span>
+                    <div class="closed-social-links">
+                        <a href="https://www.instagram.com/chan_city_sports_club/" target="_blank" class="closed-social-link" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@chancitysportsclub" target="_blank" class="closed-social-link" title="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="closed-social-link" title="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
         `;
 
@@ -108,6 +107,284 @@ class RegistrationHandler {
         if (formParent) {
             formParent.insertBefore(closedMessage, this.form);
         }
+    }
+
+    addClosedMessageStyles() {
+        if (document.getElementById('registration-closed-styles')) return;
+
+        const styles = document.createElement('style');
+        styles.id = 'registration-closed-styles';
+        styles.textContent = `
+            .closed-message-container {
+                background: linear-gradient(145deg, var(--neutral-800) 0%, var(--neutral-900) 100%);
+                border: 1px solid var(--gold-500);
+                border-radius: 24px;
+                padding: 60px 50px;
+                text-align: center;
+                max-width: 650px;
+                margin: 40px auto;
+                box-shadow: 0 25px 80px rgba(0,0,0,0.4), 0 0 0 1px rgba(184, 134, 11, 0.1);
+                position: relative;
+                overflow: hidden;
+                animation: fadeInUp 0.6s ease-out;
+            }
+            
+            .closed-message-container::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 4px;
+                background: linear-gradient(90deg, var(--gold-600), var(--gold-400), var(--gold-600));
+            }
+            
+            .closed-logo {
+                width: 150px;
+                height: 150px;
+                object-fit: contain;
+                margin: 0 auto 30px;
+                display: block;
+                border-radius: 50%;
+                box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            }
+            
+            @keyframes fadeInUp {
+                from { opacity: 0; transform: translateY(30px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+            
+            .closed-badge {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                background: linear-gradient(135deg, rgba(184, 134, 11, 0.2), rgba(184, 134, 11, 0.1));
+                border: 1px solid var(--gold-500);
+                padding: 8px 20px;
+                border-radius: 50px;
+                font-size: var(--text-sm);
+                font-weight: 600;
+                color: var(--gold-400);
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                margin-bottom: 24px;
+            }
+            
+            .closed-badge i {
+                font-size: 12px;
+            }
+            
+            .closed-heading {
+                font-family: 'Montserrat', sans-serif;
+                font-size: var(--text-3xl);
+                font-weight: 700;
+                color: var(--text-primary);
+                margin-bottom: 20px;
+                line-height: 1.3;
+            }
+            
+            .closed-text {
+                font-family: 'Inter', sans-serif;
+                color: var(--text-secondary);
+                font-size: var(--text-lg);
+                line-height: 1.8;
+                margin-bottom: 24px;
+                max-width: 500px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            .closed-divider {
+                display: flex;
+                align-items: center;
+                gap: 16px;
+                margin: 32px 0;
+                color: var(--gold-400);
+            }
+            
+            .closed-divider span {
+                flex: 1;
+                height: 1px;
+                background: linear-gradient(90deg, transparent, var(--gold-500), transparent);
+            }
+            
+            .closed-divider i {
+                font-size: 20px;
+            }
+            
+            .closed-subtext {
+                font-family: 'Inter', sans-serif;
+                color: var(--text-muted);
+                font-size: var(--text-base);
+                line-height: 1.7;
+                margin-bottom: 32px;
+                font-style: italic;
+            }
+            
+            .closed-actions {
+                display: flex;
+                gap: 16px;
+                justify-content: center;
+                flex-wrap: wrap;
+                margin-bottom: 40px;
+            }
+            
+            .closed-contact-btn {
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+                font-family: 'Montserrat', sans-serif;
+                font-size: var(--text-base);
+                font-weight: 600;
+                padding: 16px 32px;
+                border-radius: 12px;
+                text-decoration: none;
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                cursor: pointer;
+            }
+            
+            .closed-contact-btn.primary {
+                background: linear-gradient(135deg, var(--gold-500), var(--gold-400));
+                color: var(--neutral-900);
+                box-shadow: 0 8px 30px rgba(184, 134, 11, 0.3);
+            }
+            
+            .closed-contact-btn.primary:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 12px 40px rgba(184, 134, 11, 0.5);
+            }
+            
+            .closed-contact-btn.secondary {
+                background: transparent;
+                color: var(--text-primary);
+                border: 2px solid var(--neutral-600);
+            }
+            
+            .closed-contact-btn.secondary:hover {
+                border-color: var(--gold-500);
+                color: var(--gold-400);
+                transform: translateY(-3px);
+            }
+            
+            .closed-social {
+                padding-top: 32px;
+                border-top: 1px solid var(--neutral-700);
+            }
+            
+            .closed-social-text {
+                display: block;
+                font-family: 'Inter', sans-serif;
+                font-size: var(--text-sm);
+                color: var(--text-muted);
+                margin-bottom: 16px;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+            
+            .closed-social-links {
+                display: flex;
+                gap: 12px;
+                justify-content: center;
+            }
+            
+            .closed-social-link {
+                width: 44px;
+                height: 44px;
+                background: var(--neutral-700);
+                border-radius: 12px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: var(--text-secondary);
+                font-size: 18px;
+                transition: all 0.3s ease;
+                text-decoration: none;
+            }
+            
+            .closed-social-link:hover {
+                background: var(--gold-500);
+                color: var(--neutral-900);
+                transform: translateY(-3px);
+            }
+
+            /* Tablet styles */
+            @media (max-width: 768px) {
+                .closed-message-container {
+                    padding: 50px 30px;
+                    margin: 20px;
+                    border-radius: 20px;
+                }
+                .closed-logo {
+                    width: 120px;
+                    height: 120px;
+                    margin-bottom: 24px;
+                }
+                .closed-heading {
+                    font-size: var(--text-2xl);
+                }
+                .closed-text {
+                    font-size: var(--text-base);
+                }
+                .closed-actions {
+                    flex-direction: column;
+                    gap: 12px;
+                }
+                .closed-contact-btn {
+                    width: 100%;
+                    justify-content: center;
+                }
+            }
+
+            /* Mobile styles */
+            @media (max-width: 480px) {
+                .closed-message-container {
+                    padding: 40px 24px;
+                    margin: 16px;
+                    border-radius: 16px;
+                }
+                .closed-logo {
+                    width: 100px;
+                    height: 100px;
+                    margin-bottom: 20px;
+                }
+                .closed-badge {
+                    font-size: 11px;
+                    padding: 6px 16px;
+                    margin-bottom: 20px;
+                }
+                .closed-heading {
+                    font-size: var(--text-xl);
+                    margin-bottom: 16px;
+                }
+                .closed-text {
+                    font-size: var(--text-sm);
+                    margin-bottom: 20px;
+                }
+                .closed-divider {
+                    margin: 24px 0;
+                }
+                .closed-subtext {
+                    font-size: var(--text-sm);
+                    margin-bottom: 24px;
+                }
+                .closed-actions {
+                    margin-bottom: 32px;
+                }
+                .closed-contact-btn {
+                    padding: 14px 24px;
+                    font-size: var(--text-sm);
+                }
+                .closed-social {
+                    padding-top: 24px;
+                }
+                .closed-social-link {
+                    width: 40px;
+                    height: 40px;
+                    font-size: 16px;
+                }
+            }
+        `;
+        document.head.appendChild(styles);
     }
 
 
