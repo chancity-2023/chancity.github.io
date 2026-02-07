@@ -73,7 +73,7 @@ class RegistrationHandler {
                     color: #e74c3c;
                     margin-bottom: 20px;
                     letter-spacing: 3px;
-                ">REGISTRATIONS CLOSED</h2>
+                ">CLOSED</h2>
                 <p style="
                     font-family: 'Poppins', sans-serif;
                     color: #cbd5e1;
